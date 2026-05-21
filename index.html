@@ -27,7 +27,6 @@ html{
 body{
     font-family:Arial,sans-serif;
     background:#f4f6f9;
-    color:#333;
     overflow-x:hidden;
 }
 
@@ -72,7 +71,7 @@ header{
     font-weight:bold;
 }
 
-/* NAVBAR */
+/* NAVIGATION */
 
 nav{
     background:#004080;
@@ -90,7 +89,7 @@ nav{
 nav a{
     color:white;
     text-decoration:none;
-    font-size:17px;
+    font-size:16px;
     font-weight:bold;
     padding:8px 14px;
     border-radius:6px;
@@ -105,26 +104,31 @@ nav a:hover{
 /* HERO */
 
 .hero{
-    min-height:90vh;
+
+    min-height:100vh;
 
     background-image:
-    linear-gradient(rgba(0,0,0,0.35),
-    rgba(0,0,0,0.35)),
+    linear-gradient(rgba(0,0,0,0.25),
+    rgba(0,0,0,0.25)),
     url("school-building.jpg");
 
     background-size:cover;
+
     background-position:center;
+
     background-repeat:no-repeat;
 
     display:flex;
+
     justify-content:center;
+
     align-items:center;
 
     text-align:center;
 
-    padding:20px;
-
     color:white;
+
+    padding:20px;
 }
 
 .hero-content{
@@ -141,67 +145,86 @@ nav a:hover{
 
 .hero h2{
     font-size:65px;
-    line-height:1.2;
-    margin-bottom:15px;
+    line-height:1.3;
     color:white;
     text-shadow:2px 2px 10px black;
 }
 
 .hero p{
-    font-size:26px;
-    margin-bottom:25px;
+    font-size:28px;
+    margin-top:15px;
     color:white;
+    text-shadow:2px 2px 10px black;
 }
 
-.hero button{
-    padding:14px 28px;
-    border:none;
+/* FLOATING NOTICE */
+
+.floating-notice{
     background:#ffd700;
-    color:black;
-    font-size:18px;
-    font-weight:bold;
-    border-radius:8px;
-    cursor:pointer;
+    padding:18px 0;
+    overflow:hidden;
 }
 
-.hero button:hover{
-    background:white;
-}
-
-/* COMMON */
-
-section{
-    padding:70px 40px;
-}
-
-section h2{
+.floating-notice h2{
     text-align:center;
-    font-size:40px;
     color:#002855;
-    margin-bottom:30px;
+    margin-bottom:12px;
+    font-size:32px;
 }
 
-/* ABOUT */
+.notice-wrapper{
+    width:100%;
+    overflow:hidden;
+    position:relative;
+}
 
-.about{
+.notice-track{
+    display:flex;
+    width:max-content;
+    gap:60px;
+    animation:scrollNotice 18s linear infinite;
+}
+
+.notice-track span{
+    font-size:22px;
+    font-weight:bold;
+    color:#002855;
+    white-space:nowrap;
+}
+
+@keyframes scrollNotice{
+
+0%{
+    transform:translateX(100%);
+}
+
+100%{
+    transform:translateX(-100%);
+}
+
+}
+
+/* MESSAGE SECTIONS */
+
+.chairman,
+.principal{
+    padding:70px 40px;
     background:white;
 }
 
-.about p{
-    max-width:1000px;
-    margin:auto;
-    text-align:center;
-    font-size:19px;
-    line-height:1.9;
-}
-
-/* PRINCIPAL */
-
-.principal{
+.chairman{
     background:#eef5ff;
 }
 
-.principal-container{
+.chairman h2,
+.principal h2{
+    text-align:center;
+    font-size:40px;
+    color:#002855;
+    margin-bottom:40px;
+}
+
+.message-container{
     display:flex;
     justify-content:center;
     align-items:center;
@@ -209,7 +232,7 @@ section h2{
     flex-wrap:wrap;
 }
 
-.principal-container img{
+.message-container img{
     width:260px;
     height:260px;
     object-fit:cover;
@@ -217,108 +240,35 @@ section h2{
     box-shadow:0 0 15px rgba(0,0,0,0.2);
 }
 
-.principal-text{
+.message-text{
     max-width:700px;
 }
 
-.principal-text h3{
+.message-text h3{
     font-size:34px;
     color:#002855;
     margin-bottom:15px;
 }
 
-.principal-text p{
-    font-size:19px;
-    line-height:1.9;
-}
-
-/* NOTICE */
-
-.notice-board{
-    background:white;
-}
-
-.notice-box{
-    max-width:850px;
-    margin:auto;
-    background:#eef5ff;
-    padding:30px;
-    border-radius:12px;
-    box-shadow:0 0 15px rgba(0,0,0,0.1);
-}
-
-#noticeText{
-    text-align:center;
-    font-size:26px;
-    color:#004080;
-    font-weight:bold;
-}
-
-/* TEACHERS */
-
-.teachers{
-    background:#eef5ff;
-}
-
-.teacher-container{
-    display:flex;
-    justify-content:center;
-    gap:25px;
-    flex-wrap:wrap;
-}
-
-.teacher-card{
-    width:300px;
-    background:white;
-    padding:25px;
-    text-align:center;
-    border-radius:15px;
-    box-shadow:0 0 12px rgba(0,0,0,0.1);
-}
-
-.teacher-card img{
-    width:130px;
-    height:130px;
-    border-radius:50%;
-    object-fit:cover;
-    margin-bottom:15px;
-}
-
-.teacher-card h3{
-    color:#002855;
-    margin-bottom:10px;
-}
-
-/* GALLERY */
-
-.gallery{
-    background:white;
-}
-
-.gallery-container{
-    display:flex;
-    justify-content:center;
-    gap:20px;
-    flex-wrap:wrap;
-}
-
-.gallery-container img{
-    width:320px;
-    height:220px;
-    object-fit:cover;
-    border-radius:15px;
-}
-
-/* CONTACT */
-
-.contact{
-    background:#eef5ff;
-    text-align:center;
-}
-
-.contact p{
+.message-text p{
     font-size:20px;
-    margin-bottom:12px;
+    line-height:1.8;
+    color:#444;
+    margin-bottom:25px;
+}
+
+.read-btn{
+    background:#004080;
+    color:white;
+    text-decoration:none;
+    padding:12px 20px;
+    border-radius:8px;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.read-btn:hover{
+    background:#002855;
 }
 
 /* FOOTER */
@@ -327,15 +277,14 @@ footer{
     background:#002855;
     color:white;
     text-align:center;
-    padding:20px 15px;
+    padding:20px;
 }
 
 footer p{
     margin-bottom:8px;
-    font-size:15px;
 }
 
-/* DARK MODE */
+/* DARK MODE BUTTON */
 
 .dark-btn{
     position:fixed;
@@ -351,27 +300,16 @@ footer p{
     font-size:13px;
 }
 
+/* DARK MODE */
+
 .dark-mode{
     background:#111;
     color:white;
 }
 
-.dark-mode .about,
-.dark-mode .notice-board,
-.dark-mode .gallery{
+.dark-mode .chairman,
+.dark-mode .principal{
     background:#1c1c1c;
-}
-
-.dark-mode .principal,
-.dark-mode .teachers,
-.dark-mode .contact{
-    background:#222;
-}
-
-.dark-mode .teacher-card,
-.dark-mode .notice-box{
-    background:#333;
-    color:white;
 }
 
 .dark-mode h2,
@@ -395,13 +333,12 @@ header{
 }
 
 .logo-area img{
-    width:65px;
-    height:65px;
+    width:60px;
+    height:60px;
 }
 
 .logo-text h1{
     font-size:24px;
-    line-height:1.3;
 }
 
 .logo-text p{
@@ -409,8 +346,10 @@ header{
 }
 
 #clock{
-    font-size:17px;
+    font-size:18px;
 }
+
+/* NAVIGATION */
 
 nav{
     gap:5px;
@@ -422,15 +361,11 @@ nav a{
     padding:6px 10px;
 }
 
-/* HERO MOBILE FIXED */
+/* MOBILE HERO FIX */
 
 .hero{
-    min-height:55vh;
 
-    background-image:
-    linear-gradient(rgba(0,0,0,0.25),
-    rgba(0,0,0,0.25)),
-    url("school-building.jpg");
+    min-height:55vh;
 
     background-size:contain;
 
@@ -441,128 +376,83 @@ nav a{
     background-color:#002855;
 
     padding:20px 15px;
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-    text-align:center;
-
-    color:white;
 }
 
 .hero-content{
-    margin-top:-80px;
+    margin-top:-70px;
 }
 
 .hero-content img{
     width:70px;
-    margin-bottom:12px;
+    margin-bottom:10px;
 }
 
 .hero h2{
     font-size:24px;
     line-height:1.4;
-    margin-bottom:10px;
-    color:white;
-    text-shadow:2px 2px 8px black;
 }
 
 .hero p{
     font-size:14px;
-    margin-bottom:15px;
-    color:white;
 }
 
-.hero button{
-    padding:10px 18px;
-    font-size:14px;
+/* FLOATING NOTICE MOBILE */
+
+.floating-notice{
+    padding:14px 0;
 }
 
-/* SECTION */
-
-section{
-    padding:40px 18px;
+.floating-notice h2{
+    font-size:24px;
 }
 
-section h2{
+.notice-track{
+    gap:40px;
+}
+
+.notice-track span{
+    font-size:15px;
+}
+
+/* MESSAGE MOBILE */
+
+.chairman,
+.principal{
+    padding:40px 20px;
+}
+
+.chairman h2,
+.principal h2{
     font-size:28px;
 }
 
-/* ABOUT */
-
-.about p{
-    font-size:14px;
-    line-height:1.8;
-    text-align:justify;
-}
-
-/* PRINCIPAL */
-
-.principal-container{
+.message-container{
     flex-direction:column;
     text-align:center;
 }
 
-.principal-container img{
+.message-container img{
     width:180px;
     height:180px;
 }
 
-.principal-text h3{
+.message-text h3{
     font-size:24px;
 }
 
-.principal-text p{
-    font-size:14px;
-    line-height:1.8;
+.message-text p{
+    font-size:15px;
+    line-height:1.7;
     text-align:justify;
 }
 
-/* NOTICE */
-
-.notice-box{
-    padding:20px;
+.read-btn{
+    font-size:14px;
+    padding:10px 16px;
 }
 
-#noticeText{
-    font-size:18px;
-}
-
-/* TEACHERS */
-
-.teacher-card{
-    width:100%;
-    max-width:320px;
-}
-
-/* GALLERY */
-
-.gallery-container{
-    flex-direction:column;
-    align-items:center;
-}
-
-.gallery-container img{
-    width:100%;
-    max-width:340px;
-    height:auto;
-}
-
-/* CONTACT */
-
-.contact p{
-    font-size:15px;
-    line-height:1.7;
-}
-
-/* FOOTER */
-
-footer p{
+footer{
     font-size:13px;
-    line-height:1.6;
 }
 
 }
@@ -572,6 +462,8 @@ footer p{
 </head>
 
 <body>
+
+<!-- HEADER -->
 
 <header>
 
@@ -593,127 +485,126 @@ footer p{
 
 </header>
 
+<!-- NAVIGATION -->
+
 <nav>
 
-<a href="#home">Home</a>
+<a href="index.html">Home</a>
 
 <a href="about.html">About</a>
 
 <a href="notice.html">Notice Board</a>
 
-<a href="#teachers">Teachers</a>
+<a href="teachers.html">Teachers</a>
 
-<a href="#gallery">Gallery</a>
+<a href="gallery.html">Gallery</a>
 
-<a href="#contact">Contact</a>
+<a href="alumni.html">Proud Alumni</a>
+
+<a href="contact.html">Contact</a>
 
 </nav>
 
-<section class="hero" id="home">
+<!-- HERO -->
+
+<section class="hero">
 
 <div class="hero-content">
 
 <img src="logo.jpg" alt="School Logo">
 
-<h2>Welcome to <br> Maryam Memorial Institute</h2>
+<h2>
+Welcome to <br>
+Maryam Memorial Institute
+</h2>
 
 <p>Education for a Better Future</p>
-
-<button onclick="showMessage()">
-
-Learn More
-
-</button>
 
 </div>
 
 </section>
 
-<section class="about">
+<!-- FLOATING NOTICE -->
 
-<h2>About Our School</h2>
+<section class="floating-notice">
 
-<p>
-Maryam Memorial Institute is dedicated to providing
-excellent education, discipline, and moral values
-to students.
-</p>
+<h2>Latest Notices</h2>
+
+<div class="notice-wrapper">
+
+<div class="notice-track">
+
+<span>📢 Admissions Open for 2026 Session</span>
+
+<span>📢 Parent-Teacher Meeting on Friday</span>
+
+<span>📢 Summer Vacation Starts June 10</span>
+
+<span>📢 Annual Function Next Month</span>
+
+</div>
+
+</div>
 
 </section>
+
+<!-- CHAIRMAN MESSAGE -->
+
+<section class="chairman">
+
+<h2>Chairman's Message</h2>
+
+<div class="message-container">
+
+<img src="chairman.jpg" alt="Chairman Photo">
+
+<div class="message-text">
+
+<h3>Chairman</h3>
+
+<p>
+Welcome to Maryam Memorial Institute.
+Our aim is to provide quality education,
+discipline, and a bright future for students.
+</p>
+
+<a href="chairman.html" class="read-btn">
+
+Read Full Message
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- PRINCIPAL MESSAGE -->
 
 <section class="principal">
 
 <h2>Principal's Message</h2>
 
-<div class="principal-container">
+<div class="message-container">
 
-<img src="principal.jpg">
+<img src="principal.jpg" alt="Principal Photo">
 
-<div class="principal-text">
+<div class="message-text">
 
 <h3>Mohammad Iqbal Rather</h3>
 
 <p>
 Welcome to Maryam Memorial Institute.
-Our goal is to provide quality education
-and moral values to every student.
+We are committed to academic excellence,
+discipline, and moral values for every student.
 </p>
 
-</div>
+<a href="principal.html" class="read-btn">
 
-</div>
+Read Full Message
 
-</section>
-
-<section class="notice-board">
-
-<h2>Notice Board</h2>
-
-<div class="notice-box">
-
-<p id="noticeText">
-
-Admissions Open for 2026 Session
-
-</p>
-
-</div>
-
-</section>
-
-<section class="teachers" id="teachers">
-
-<h2>Our Teachers</h2>
-
-<div class="teacher-container">
-
-<div class="teacher-card">
-
-<img src="logo.jpg">
-
-<h3>Mr. Ahmad</h3>
-
-<p>Mathematics Teacher</p>
-
-</div>
-
-<div class="teacher-card">
-
-<img src="logo.jpg">
-
-<h3>Mrs. Fatima</h3>
-
-<p>Science Teacher</p>
-
-</div>
-
-<div class="teacher-card">
-
-<img src="logo.jpg">
-
-<h3>Mr. Bilal</h3>
-
-<p>English Teacher</p>
+</a>
 
 </div>
 
@@ -721,42 +612,15 @@ Admissions Open for 2026 Session
 
 </section>
 
-<section class="gallery" id="gallery">
-
-<h2>School Gallery</h2>
-
-<div class="gallery-container">
-
-<img src="school-building.jpg">
-
-<img src="school-building.jpg">
-
-<img src="school-building.jpg">
-
-</div>
-
-</section>
-
-<section class="contact" id="contact">
-
-<h2>Contact Us</h2>
-
-<p><strong>Address:</strong>
-Tawheed Bagh, Pandithpora, Qaziabad, Kupwara</p>
-
-<p><strong>Phone:</strong>
-+91 6006082136</p>
-
-<p><strong>Email:</strong>
-info@maryammemorial.com</p>
-
-</section>
+<!-- DARK MODE -->
 
 <button class="dark-btn" onclick="toggleDarkMode()">
 
 🌙 Dark Mode
 
 </button>
+
+<!-- FOOTER -->
 
 <footer>
 
@@ -765,6 +629,8 @@ info@maryammemorial.com</p>
 <p>Tawheed Bagh, Pandithpora, Qaziabad, Kupwara</p>
 
 </footer>
+
+<!-- JAVASCRIPT -->
 
 <script>
 
@@ -781,46 +647,9 @@ setInterval(updateClock,1000);
 
 updateClock();
 
-const notices = [
-
-"Admissions Open for 2026 Session",
-
-"Parent-Teacher Meeting on Friday",
-
-"Summer Vacation Starts June 10",
-
-"Annual Function Next Month"
-
-];
-
-let noticeIndex = 0;
-
-function changeNotice(){
-
-document.getElementById("noticeText").innerHTML =
-notices[noticeIndex];
-
-noticeIndex++;
-
-if(noticeIndex >= notices.length){
-
-noticeIndex = 0;
-
-}
-
-}
-
-setInterval(changeNotice,3000);
-
 function toggleDarkMode(){
 
 document.body.classList.toggle("dark-mode");
-
-}
-
-function showMessage(){
-
-alert("Welcome to Maryam Memorial Institute");
 
 }
 
