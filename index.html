@@ -6,7 +6,9 @@
     <meta charset="UTF-8">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="google-site-verification" content="ih_zt6pQjEG6SNBw5zhYPxEae4ZZ7dlbZaTARXYnrTM" />
+
+    <meta name="google-site-verification"
+    content="ih_zt6pQjEG6SNBw5zhYPxEae4ZZ7dlbZaTARXYnrTM" />
 
     <title>Maryam Memorial Institute</title>
 
@@ -25,7 +27,12 @@
         body{
             font-family:Arial, sans-serif;
             background:#f4f6f9;
+            color:#333;
             transition:0.4s;
+        }
+
+        img{
+            max-width:100%;
         }
 
         /* HEADER */
@@ -33,7 +40,7 @@
         header{
             background:#002855;
             color:white;
-            padding:15px 40px;
+            padding:15px 30px;
             display:flex;
             justify-content:space-between;
             align-items:center;
@@ -43,28 +50,29 @@
         .logo-area{
             display:flex;
             align-items:center;
-            gap:20px;
+            gap:15px;
         }
 
         .logo-area img{
-            width:90px;
-            height:90px;
+            width:80px;
+            height:80px;
             border-radius:50%;
             background:white;
             padding:5px;
+            object-fit:cover;
         }
 
         .logo-text h1{
-            font-size:42px;
+            font-size:36px;
         }
 
         .logo-text p{
-            font-size:18px;
+            font-size:16px;
             margin-top:5px;
         }
 
         #clock{
-            font-size:24px;
+            font-size:22px;
             font-weight:bold;
         }
 
@@ -72,8 +80,12 @@
 
         nav{
             background:#004080;
-            padding:15px;
-            text-align:center;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            flex-wrap:wrap;
+            gap:10px;
+            padding:12px;
             position:sticky;
             top:0;
             z-index:1000;
@@ -82,23 +94,25 @@
         nav a{
             color:white;
             text-decoration:none;
-            margin:15px;
-            font-size:18px;
+            font-size:17px;
             font-weight:bold;
+            padding:8px 14px;
+            border-radius:6px;
             transition:0.3s;
         }
 
         nav a:hover{
-            color:#ffd700;
+            background:#ffd700;
+            color:black;
         }
 
-        /* HERO SECTION */
+        /* HERO */
 
         .hero{
-            height:90vh;
+            min-height:90vh;
 
             background:
-            linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+            linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
             url("school-building.jpg");
 
             background-size:cover;
@@ -118,33 +132,34 @@
         }
 
         .hero-content img{
-            width:170px;
-            margin-bottom:25px;
+            width:150px;
             background:white;
-            padding:10px;
+            padding:8px;
             border-radius:50%;
+            margin-bottom:20px;
         }
 
         .hero h2{
-            font-size:70px;
-            margin-bottom:20px;
-            text-shadow:2px 2px 10px black;
+            font-size:65px;
+            margin-bottom:15px;
+            line-height:1.2;
+            text-shadow:2px 2px 8px black;
         }
 
         .hero p{
-            font-size:28px;
-            margin-bottom:30px;
+            font-size:26px;
+            margin-bottom:25px;
         }
 
         .hero button{
-            padding:15px 30px;
-            font-size:18px;
+            padding:14px 28px;
             border:none;
             background:#ffd700;
             color:black;
+            font-size:18px;
+            font-weight:bold;
             border-radius:8px;
             cursor:pointer;
-            font-weight:bold;
             transition:0.3s;
         }
 
@@ -152,55 +167,88 @@
             background:white;
         }
 
-        /* ABOUT */
+        /* SECTION COMMON */
 
-        .about{
+        section{
             padding:70px 40px;
-            background:white;
         }
 
-        .about h2{
+        section h2{
             text-align:center;
             font-size:40px;
             color:#002855;
             margin-bottom:30px;
         }
 
-        .about p{
-            text-align:center;
-            font-size:20px;
-            line-height:1.8;
-            max-width:1000px;
-            margin:auto;
-            color:#444;
+        /* ABOUT */
+
+        .about{
+            background:white;
         }
 
-        /* NOTICE BOARD */
+        .about p{
+            max-width:1000px;
+            margin:auto;
+            text-align:center;
+            font-size:19px;
+            line-height:1.9;
+        }
 
-        .notice-board{
-            padding:70px 40px;
+        /* PRINCIPAL */
+
+        .principal{
             background:#eef5ff;
         }
 
-        .notice-board h2{
-            text-align:center;
-            font-size:40px;
+        .principal-container{
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            gap:40px;
+            flex-wrap:wrap;
+        }
+
+        .principal-container img{
+            width:260px;
+            height:260px;
+            object-fit:cover;
+            border-radius:20px;
+            box-shadow:0 0 15px rgba(0,0,0,0.2);
+        }
+
+        .principal-text{
+            max-width:700px;
+        }
+
+        .principal-text h3{
+            font-size:34px;
             color:#002855;
-            margin-bottom:40px;
+            margin-bottom:15px;
+        }
+
+        .principal-text p{
+            font-size:19px;
+            line-height:1.9;
+        }
+
+        /* NOTICE */
+
+        .notice-board{
+            background:white;
         }
 
         .notice-box{
-            background:white;
-            max-width:800px;
+            max-width:850px;
             margin:auto;
+            background:#eef5ff;
             padding:30px;
-            border-radius:10px;
+            border-radius:12px;
             box-shadow:0 0 15px rgba(0,0,0,0.1);
         }
 
         #noticeText{
-            font-size:28px;
             text-align:center;
+            font-size:26px;
             color:#004080;
             font-weight:bold;
         }
@@ -208,43 +256,36 @@
         /* TEACHERS */
 
         .teachers{
-            padding:70px 40px;
-            background:white;
-        }
-
-        .teachers h2{
-            text-align:center;
-            font-size:40px;
-            color:#002855;
-            margin-bottom:40px;
+            background:#eef5ff;
         }
 
         .teacher-container{
             display:flex;
-            gap:30px;
             justify-content:center;
+            gap:25px;
             flex-wrap:wrap;
         }
 
         .teacher-card{
-            background:#f9f9f9;
             width:300px;
-            padding:30px;
-            border-radius:15px;
+            background:white;
+            padding:25px;
             text-align:center;
-            box-shadow:0 0 15px rgba(0,0,0,0.1);
-            transition:0.4s;
+            border-radius:15px;
+            box-shadow:0 0 12px rgba(0,0,0,0.1);
+            transition:0.3s;
         }
 
         .teacher-card:hover{
-            transform:translateY(-10px);
+            transform:translateY(-8px);
         }
 
         .teacher-card img{
-            width:140px;
-            height:140px;
+            width:130px;
+            height:130px;
             border-radius:50%;
-            margin-bottom:20px;
+            object-fit:cover;
+            margin-bottom:15px;
         }
 
         .teacher-card h3{
@@ -253,21 +294,13 @@
         }
 
         .teacher-card p{
-            color:#444;
+            font-size:17px;
         }
 
         /* GALLERY */
 
         .gallery{
-            padding:70px 40px;
-            background:#eef5ff;
-        }
-
-        .gallery h2{
-            text-align:center;
-            font-size:40px;
-            color:#002855;
-            margin-bottom:40px;
+            background:white;
         }
 
         .gallery-container{
@@ -282,91 +315,23 @@
             height:220px;
             object-fit:cover;
             border-radius:15px;
-            transition:0.4s;
+            transition:0.3s;
         }
 
         .gallery-container img:hover{
-            transform:scale(1.05);
+            transform:scale(1.04);
         }
-/* PRINCIPAL SECTION */
 
-.principal{
-    padding:70px 40px;
-    background:#eef5ff;
-}
-
-.principal h2{
-    text-align:center;
-    font-size:40px;
-    color:#002855;
-    margin-bottom:40px;
-}
-
-.principal-container{
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    gap:40px;
-    flex-wrap:wrap;
-}
-
-.principal-container img{
-    width:280px;
-    height:280px;
-    object-fit:cover;
-    border-radius:20px;
-    box-shadow:0 0 15px rgba(0,0,0,0.2);
-}
-
-.principal-text{
-    max-width:700px;
-}
-
-.principal-text h3{
-    font-size:35px;
-    color:#002855;
-    margin-bottom:20px;
-}
-
-.principal-text p{
-    font-size:20px;
-    line-height:1.8;
-    color:#444;
-}
         /* CONTACT */
 
         .contact{
-            padding:70px 40px;
-            background:white;
+            background:#eef5ff;
             text-align:center;
         }
 
-        .contact h2{
-            font-size:40px;
-            color:#002855;
-            margin-bottom:30px;
-        }
-
         .contact p{
-            font-size:22px;
-            margin-bottom:15px;
-            color:#444;
-        }
-
-        /* DARK MODE BUTTON */
-
-        .dark-btn{
-            position:fixed;
-            bottom:70px;
-            right:20px;
-            background:#002855;
-            color:white;
-            border:none;
-            padding:15px 20px;
-            border-radius:50px;
-            cursor:pointer;
-            font-size:16px;
-            z-index:1000;
+            font-size:20px;
+            margin-bottom:12px;
         }
 
         /* FOOTER */
@@ -375,10 +340,28 @@
             background:#002855;
             color:white;
             text-align:center;
-            padding:30px;
+            padding:25px 15px;
+        }
+
+        footer p{
+            margin-bottom:8px;
         }
 
         /* DARK MODE */
+
+        .dark-btn{
+            position:fixed;
+            right:15px;
+            bottom:80px;
+            background:#002855;
+            color:white;
+            border:none;
+            padding:12px 18px;
+            border-radius:50px;
+            cursor:pointer;
+            z-index:1000;
+            font-size:15px;
+        }
 
         .dark-mode{
             background:#111;
@@ -386,13 +369,14 @@
         }
 
         .dark-mode .about,
-        .dark-mode .teachers,
-        .dark-mode .contact{
+        .dark-mode .notice-board,
+        .dark-mode .gallery{
             background:#1c1c1c;
         }
 
-        .dark-mode .gallery,
-        .dark-mode .notice-board{
+        .dark-mode .principal,
+        .dark-mode .teachers,
+        .dark-mode .contact{
             background:#222;
         }
 
@@ -403,226 +387,187 @@
         }
 
         .dark-mode h2,
-        .dark-mode p,
-        .dark-mode h3{
+        .dark-mode h3,
+        .dark-mode p{
             color:white;
         }
 
-        /* MOBILE */
+        /* MOBILE RESPONSIVE */
 
-    @media(max-width:768px){
+        @media(max-width:768px){
 
-    header{
-        flex-direction:column;
-        text-align:center;
-        gap:15px;
-        padding:15px;
-    }
+            header{
+                flex-direction:column;
+                text-align:center;
+                gap:15px;
+                padding:15px;
+            }
 
-    .logo-area{
-        flex-direction:column;
-    }
+            .logo-area{
+                flex-direction:column;
+            }
 
-    .logo-area img{
-        width:70px;
-        height:70px;
-    }
+            .logo-area img{
+                width:65px;
+                height:65px;
+            }
 
-    .logo-text h1{
-        font-size:24px;
-    }
+            .logo-text h1{
+                font-size:24px;
+                line-height:1.3;
+            }
 
-    .logo-text p{
-        font-size:14px;
-    }
+            .logo-text p{
+                font-size:13px;
+            }
 
-    #clock{
-        font-size:18px;
-    }
+            #clock{
+                font-size:17px;
+            }
 
-    nav{
-        padding:10px;
-    }
-nav{
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    flex-wrap:wrap;
-    gap:10px;
-    padding:10px;
-}
+            nav{
+                gap:5px;
+                padding:10px;
+            }
 
-nav a{
-    display:inline-block;
-    margin:5px;
-    font-size:14px;
-    padding:6px 10px;
-}
+            nav a{
+                font-size:13px;
+                padding:6px 10px;
+            }
 
-    /* HERO SECTION */
+            /* HERO */
 
- .hero{
-    height:50vh;
-    padding:20px;
-    background-position:center;
-    background-size:cover;
-     .hero-content img{
-    width:70px;
-    margin-bottom:10px;
-}
+            .hero{
+                min-height:55vh;
+                background-size:100% auto;
+                background-position:top center;
+                background-repeat:no-repeat;
+                padding:25px 15px;
+            }
 
-.hero h2{
-    font-size:24px;
-    line-height:1.3;
-    margin-bottom:10px;
-}
+            .hero-content img{
+                width:70px;
+                margin-bottom:12px;
+            }
 
-.hero p{
-    font-size:14px;
-    margin-bottom:15px;
-}
-}
+            .hero h2{
+                font-size:24px;
+                line-height:1.4;
+                margin-bottom:10px;
+            }
 
-.hero-content img{
-    width:70px;
-    margin-bottom:10px;
-}
+            .hero p{
+                font-size:14px;
+                margin-bottom:15px;
+            }
 
-.hero h2{
-    font-size:24px;
-    line-height:1.3;
-    margin-bottom:10px;
-}
+            .hero button{
+                padding:10px 18px;
+                font-size:14px;
+            }
 
-.hero p{
-    font-size:14px;
-    margin-bottom:15px;
-}
+            /* SECTION */
 
-    .hero button{
-        padding:12px 20px;
-        font-size:16px;
-    }
+            section{
+                padding:40px 18px;
+            }
 
-    /* ABOUT */
+            section h2{
+                font-size:28px;
+                margin-bottom:20px;
+            }
 
-    .about{
-        padding:40px 20px;
-    }
+            /* ABOUT */
 
-    .about h2{
-        font-size:30px;
-    }
+            .about p{
+                font-size:14px;
+                line-height:1.8;
+                text-align:justify;
+            }
 
-    .about p{
-        font-size:17px;
-        text-align:justify;
-    }
+            /* PRINCIPAL */
 
-    /* PRINCIPAL */
+            .principal-container{
+                flex-direction:column;
+                text-align:center;
+            }
 
-    .principal{
-        padding:40px 20px;
-    }
+            .principal-container img{
+                width:180px;
+                height:180px;
+            }
 
-    .principal h2{
-        font-size:30px;
-    }
+            .principal-text h3{
+                font-size:24px;
+            }
 
-    .principal-container{
-        flex-direction:column;
-        text-align:center;
-    }
+            .principal-text p{
+                font-size:14px;
+                line-height:1.8;
+                text-align:justify;
+            }
 
-    .principal-container img{
-        width:180px;
-        height:180px;
-    }
+            /* NOTICE */
 
-    .principal-text h3{
-        font-size:26px;
-    }
+            .notice-box{
+                padding:20px;
+            }
 
-    .principal-text p{
-        font-size:17px;
-        line-height:1.7;
-    }
+            #noticeText{
+                font-size:18px;
+            }
 
-    /* NOTICE */
+            /* TEACHERS */
 
-    .notice-board{
-        padding:40px 20px;
-    }
+            .teacher-card{
+                width:100%;
+                max-width:320px;
+            }
 
-    .notice-board h2{
-        font-size:30px;
-    }
+            .teacher-card img{
+                width:100px;
+                height:100px;
+            }
 
-    #noticeText{
-        font-size:20px;
-    }
+            /* GALLERY */
 
-    /* TEACHERS */
+            .gallery-container{
+                flex-direction:column;
+                align-items:center;
+            }
 
-    .teachers{
-        padding:40px 20px;
-    }
+            .gallery-container img{
+                width:100%;
+                max-width:340px;
+                height:auto;
+            }
 
-    .teachers h2{
-        font-size:30px;
-    }
+            /* CONTACT */
 
-    .teacher-container{
-        flex-direction:column;
-        align-items:center;
-    }
+            .contact p{
+                font-size:15px;
+                line-height:1.7;
+            }
 
-    .teacher-card{
-        width:100%;
-        max-width:320px;
-    }
+            /* FOOTER */
 
-    /* GALLERY */
+            footer{
+                padding:20px 10px;
+            }
 
-    .gallery{
-        padding:40px 20px;
-    }
+            footer p{
+                font-size:13px;
+                line-height:1.6;
+            }
 
-    .gallery h2{
-        font-size:30px;
-    }
+            /* DARK BUTTON */
 
-    .gallery-container{
-        flex-direction:column;
-        align-items:center;
-    }
-
-    .gallery-container img{
-        width:100%;
-        max-width:350px;
-        height:auto;
-    }
-
-    /* CONTACT */
-
-    .contact{
-        padding:40px 20px;
-    }
-
-    .contact h2{
-        font-size:30px;
-    }
-
-    .contact p{
-        font-size:18px;
-    }
-
-    footer{
-        padding:20px;
-        font-size:14px;
-    }
-
-}
+            .dark-btn{
+                bottom:70px;
+                right:10px;
+                font-size:13px;
+                padding:10px 14px;
+            }
 
         }
 
@@ -644,7 +589,7 @@ nav a{
 
                 <h1>Maryam Memorial Institute</h1>
 
-                <p>Tawheed Bagh Pandithpora Qaziabad, Kupwara</p>
+                <p>Tawheed Bagh, Pandithpora, Qaziabad, Kupwara</p>
 
             </div>
 
@@ -669,7 +614,6 @@ nav a{
         <a href="#gallery">Gallery</a>
 
         <a href="#contact">Contact</a>
-        <a href="#proud alumni">Proud Alumni</a>
 
     </nav>
 
@@ -681,8 +625,8 @@ nav a{
 
             <img src="logo.jpg" alt="School Logo">
 
-            <h2>Welcome to <br> Maryam Memorial Institute<h2>
-                
+            <h2>Welcome to <br> Maryam Memorial Institute</h2>
+
             <p>Education for a Better Future</p>
 
             <button onclick="showMessage()">
@@ -695,7 +639,7 @@ nav a{
 
     <!-- ABOUT -->
 
-    <section class="about" id="about">
+    <section class="about">
 
         <h2>About Our School</h2>
 
@@ -707,34 +651,36 @@ nav a{
         </p>
 
     </section>
-<!-- PRINCIPAL SECTION -->
 
-<section class="principal">
+    <!-- PRINCIPAL -->
 
-    <h2>Principal's Message</h2>
+    <section class="principal">
 
-    <div class="principal-container">
+        <h2>Principal's Message</h2>
 
-        <img src="principal.jpg">
+        <div class="principal-container">
 
-        <div class="principal-text">
+            <img src="principal.jpg" alt="Principal">
 
-            <h3>Mohammad Iqbal Rather</h3>
+            <div class="principal-text">
 
-            <p>
-                Welcome to Maryam Memorial Institute.
-                Our goal is to provide quality education
-                and moral values to every student.
-            </p>
+                <h3>Mohammad Iqbal Rather</h3>
+
+                <p>
+                    Welcome to Maryam Memorial Institute.
+                    Our goal is to provide quality education
+                    and moral values to every student.
+                </p>
+
+            </div>
 
         </div>
 
-    </div>
+    </section>
 
-</section>
-    <!-- NOTICE BOARD -->
+    <!-- NOTICE -->
 
-    <section class="notice-board" id="notice">
+    <section class="notice-board">
 
         <h2>Notice Board</h2>
 
@@ -853,7 +799,7 @@ nav a{
 
     <script>
 
-        // LIVE CLOCK
+        // CLOCK
 
         function updateClock(){
 
@@ -867,7 +813,6 @@ nav a{
         setInterval(updateClock,1000);
 
         updateClock();
-
 
         // NOTICE BOARD
 
@@ -902,7 +847,6 @@ nav a{
 
         setInterval(changeNotice,3000);
 
-
         // DARK MODE
 
         function toggleDarkMode(){
@@ -911,21 +855,11 @@ nav a{
 
         }
 
-
         // BUTTON MESSAGE
 
         function showMessage(){
 
             alert("Welcome to Maryam Memorial Institute");
-
-        }
-
-
-        // WELCOME POPUP
-
-        window.onload = function(){
-
-            alert("Welcome to Maryam Memorial Institute Website");
 
         }
 
