@@ -28,6 +28,7 @@ body{
     font-family:Arial,sans-serif;
     background:#f4f6f9;
     color:#333;
+    overflow-x:hidden;
 }
 
 /* HEADER */
@@ -107,8 +108,8 @@ nav a:hover{
     min-height:90vh;
 
     background-image:
-    linear-gradient(rgba(0,0,0,0.45),
-    rgba(0,0,0,0.45)),
+    linear-gradient(rgba(0,0,0,0.35),
+    rgba(0,0,0,0.35)),
     url("school-building.jpg");
 
     background-size:cover;
@@ -161,14 +162,13 @@ nav a:hover{
     font-weight:bold;
     border-radius:8px;
     cursor:pointer;
-    transition:0.3s;
 }
 
 .hero button:hover{
     background:white;
 }
 
-/* COMMON SECTION */
+/* COMMON */
 
 section{
     padding:70px 40px;
@@ -274,11 +274,6 @@ section h2{
     text-align:center;
     border-radius:15px;
     box-shadow:0 0 12px rgba(0,0,0,0.1);
-    transition:0.3s;
-}
-
-.teacher-card:hover{
-    transform:translateY(-8px);
 }
 
 .teacher-card img{
@@ -312,11 +307,6 @@ section h2{
     height:220px;
     object-fit:cover;
     border-radius:15px;
-    transition:0.3s;
-}
-
-.gallery-container img:hover{
-    transform:scale(1.04);
 }
 
 /* CONTACT */
@@ -337,26 +327,28 @@ footer{
     background:#002855;
     color:white;
     text-align:center;
-    padding:25px 15px;
+    padding:20px 15px;
 }
 
 footer p{
     margin-bottom:8px;
+    font-size:15px;
 }
 
 /* DARK MODE */
 
 .dark-btn{
     position:fixed;
-    right:15px;
-    bottom:75px;
+    right:10px;
+    bottom:20px;
     background:#002855;
     color:white;
     border:none;
-    padding:12px 18px;
+    padding:10px 15px;
     border-radius:50px;
     cursor:pointer;
     z-index:1000;
+    font-size:13px;
 }
 
 .dark-mode{
@@ -430,21 +422,39 @@ nav a{
     padding:6px 10px;
 }
 
-/* HERO MOBILE */
+/* HERO MOBILE FIXED */
 
 .hero{
     min-height:55vh;
 
     background-image:
-    linear-gradient(rgba(0,0,0,0.35),
-    rgba(0,0,0,0.35)),
+    linear-gradient(rgba(0,0,0,0.25),
+    rgba(0,0,0,0.25)),
     url("school-building.jpg");
 
-    background-size:cover;
-    background-position:center;
+    background-size:contain;
+
+    background-position:center top;
+
     background-repeat:no-repeat;
 
+    background-color:#002855;
+
     padding:20px 15px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    color:white;
+}
+
+.hero-content{
+    margin-top:-80px;
 }
 
 .hero-content img{
@@ -457,6 +467,7 @@ nav a{
     line-height:1.4;
     margin-bottom:10px;
     color:white;
+    text-shadow:2px 2px 8px black;
 }
 
 .hero p{
@@ -554,13 +565,6 @@ footer p{
     line-height:1.6;
 }
 
-.dark-btn{
-    bottom:70px;
-    right:10px;
-    font-size:13px;
-    padding:10px 14px;
-}
-
 }
 
 </style>
@@ -568,8 +572,6 @@ footer p{
 </head>
 
 <body>
-
-<!-- HEADER -->
 
 <header>
 
@@ -591,8 +593,6 @@ footer p{
 
 </header>
 
-<!-- NAVBAR -->
-
 <nav>
 
 <a href="#home">Home</a>
@@ -608,8 +608,6 @@ footer p{
 <a href="#contact">Contact</a>
 
 </nav>
-
-<!-- HERO -->
 
 <section class="hero" id="home">
 
@@ -631,8 +629,6 @@ Learn More
 
 </section>
 
-<!-- ABOUT -->
-
 <section class="about">
 
 <h2>About Our School</h2>
@@ -640,13 +636,10 @@ Learn More
 <p>
 Maryam Memorial Institute is dedicated to providing
 excellent education, discipline, and moral values
-to students. Our mission is to help students achieve
-academic success and become responsible citizens.
+to students.
 </p>
 
 </section>
-
-<!-- PRINCIPAL -->
 
 <section class="principal">
 
@@ -654,7 +647,7 @@ academic success and become responsible citizens.
 
 <div class="principal-container">
 
-<img src="principal.jpg" alt="Principal">
+<img src="principal.jpg">
 
 <div class="principal-text">
 
@@ -672,8 +665,6 @@ and moral values to every student.
 
 </section>
 
-<!-- NOTICE -->
-
 <section class="notice-board">
 
 <h2>Notice Board</h2>
@@ -689,8 +680,6 @@ Admissions Open for 2026 Session
 </div>
 
 </section>
-
-<!-- TEACHERS -->
 
 <section class="teachers" id="teachers">
 
@@ -732,8 +721,6 @@ Admissions Open for 2026 Session
 
 </section>
 
-<!-- GALLERY -->
-
 <section class="gallery" id="gallery">
 
 <h2>School Gallery</h2>
@@ -750,38 +737,26 @@ Admissions Open for 2026 Session
 
 </section>
 
-<!-- CONTACT -->
-
 <section class="contact" id="contact">
 
 <h2>Contact Us</h2>
 
-<p>
-<strong>Address:</strong>
-Tawheed Bagh, Pandithpora, Qaziabad, Kupwara
-</p>
+<p><strong>Address:</strong>
+Tawheed Bagh, Pandithpora, Qaziabad, Kupwara</p>
 
-<p>
-<strong>Phone:</strong>
-+91 6006082136
-</p>
+<p><strong>Phone:</strong>
++91 6006082136</p>
 
-<p>
-<strong>Email:</strong>
-info@maryammemorial.com
-</p>
+<p><strong>Email:</strong>
+info@maryammemorial.com</p>
 
 </section>
-
-<!-- DARK MODE -->
 
 <button class="dark-btn" onclick="toggleDarkMode()">
 
 🌙 Dark Mode
 
 </button>
-
-<!-- FOOTER -->
 
 <footer>
 
@@ -791,11 +766,7 @@ info@maryammemorial.com
 
 </footer>
 
-<!-- JAVASCRIPT -->
-
 <script>
-
-/* CLOCK */
 
 function updateClock(){
 
@@ -809,8 +780,6 @@ now.toLocaleTimeString();
 setInterval(updateClock,1000);
 
 updateClock();
-
-/* NOTICE */
 
 const notices = [
 
@@ -843,15 +812,11 @@ noticeIndex = 0;
 
 setInterval(changeNotice,3000);
 
-/* DARK MODE */
-
 function toggleDarkMode(){
 
 document.body.classList.toggle("dark-mode");
 
 }
-
-/* BUTTON */
 
 function showMessage(){
 
