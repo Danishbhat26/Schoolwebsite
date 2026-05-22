@@ -1,3 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="google-site-verification"
+content="ih_zt6pQjEG6SNBw5zhYPxEae4ZZ7dlbZaTARXYnrTM" />
+
+<title>Maryam Memorial Institute</title>
+
+<style>
+
+/* RESET */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial,sans-serif;
+    background:#f4f6f9;
+    overflow-x:hidden;
+}
+
+/* HEADER */
+
+header{
+    background:#002855;
+    color:white;
+    padding:15px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+}
+
+.logo-area{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.logo-area img{
+    width:80px;
+    height:80px;
+    border-radius:50%;
+    background:white;
+    padding:5px;
+    object-fit:cover;
+}
+
+.logo-text h1{
+    font-size:36px;
+}
+
+.logo-text p{
+    font-size:16px;
+    margin-top:5px;
+}
+
+#clock{
+    font-size:24px;
+    font-weight:bold;
+}
+
+/* NAVBAR */
+
+nav{
+    background:#004080;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:10px;
+    padding:12px;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    font-size:16px;
+    font-weight:bold;
+    padding:8px 14px;
+    border-radius:6px;
+    transition:0.3s;
+}
+
+nav a:hover{
+    background:#ffd700;
+    color:black;
+}
+
+/* HERO SECTION */
+
+.hero{
+
+    height:100vh;
+
+    background-image:
+    linear-gradient(rgba(0,0,0,0.35),
+    rgba(0,0,0,0.35)),
+    url("school-building.jpg");
+
+    background-size:cover;
+
+    background-position:center;
+
+    background-repeat:no-repeat;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    color:white;
+
+    padding:20px;
+}
+
+.hero-content{
+    width:100%;
+    max-width:900px;
+}
+
+.hero-content img{
+    width:150px;
+    background:white;
+    padding:8px;
+    border-radius:50%;
+    margin-bottom:20px;
+}
+
+.hero h2{
+    font-size:65px;
+    line-height:1.3;
+    color:white;
+    text-shadow:2px 2px 10px black;
+}
+
+.hero p{
+    font-size:28px;
+    margin-top:15px;
+    color:white;
+    text-shadow:2px 2px 10px black;
+}
+
+/* FLOATING NOTICE */
+
+.floating-notice{
+    background:#ffd700;
+    padding:18px 0;
+    overflow:hidden;
+}
+
+.floating-notice h2{
+    text-align:center;
+    color:#002855;
+    margin-bottom:12px;
+    font-size:32px;
+}
+
+.notice-wrapper{
+    width:100%;
+    overflow:hidden;
+}
+
+.notice-track{
+    display:flex;
+    gap:60px;
+    width:max-content;
+    animation:scrollNotice 18s linear infinite;
+}
+
+.notice-track span{
+    font-size:22px;
+    font-weight:bold;
+    color:#002855;
+    white-space:nowrap;
+}
+
+@keyframes scrollNotice{
+
+0%{
+    transform:translateX(100%);
+}
+
+100%{
+    transform:translateX(-100%);
+}
+
+}
+
+/* MESSAGE SECTION */
+
+.chairman,
+.principal{
+    padding:70px 40px;
+}
+
+.chairman{
+    background:#eef5ff;
+}
+
+.principal{
+    background:white;
+}
+
+.chairman h2,
+.principal h2{
+    text-align:center;
+    font-size:40px;
+    color:#002855;
+    margin-bottom:40px;
+}
+
+.message-container{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:40px;
+    flex-wrap:wrap;
+}
+
+.message-container img{
+    width:260px;
+    height:260px;
+    object-fit:cover;
+    border-radius:20px;
+    box-shadow:0 0 15px rgba(0,0,0,0.2);
+}
+
+.message-text{
+    max-width:700px;
+}
+
+.message-text h3{
+    font-size:34px;
+    color:#002855;
+    margin-bottom:15px;
+}
+
+.message-text p{
+    font-size:20px;
+    line-height:1.8;
+    color:#444;
+    margin-bottom:25px;
+}
+
+.read-btn{
+    background:#004080;
+    color:white;
+    text-decoration:none;
+    padding:12px 20px;
+    border-radius:8px;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.read-btn:hover{
+    background:#002855;
+}
+
+/* DARK MODE BUTTON */
+
+.dark-btn{
+    position:fixed;
+    right:10px;
+    bottom:20px;
+    background:#002855;
+    color:white;
+    border:none;
+    padding:10px 15px;
+    border-radius:50px;
+    cursor:pointer;
+    z-index:1000;
+    font-size:13px;
+}
+
+/* FOOTER */
+
+footer{
+    background:#002855;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+footer p{
+    margin-bottom:8px;
+}
+
+/* DARK MODE */
+
+.dark-mode{
+    background:#111;
+    color:white;
+}
+
+.dark-mode .chairman,
+.dark-mode .principal{
+    background:#1c1c1c;
+}
+
+.dark-mode h2,
+.dark-mode h3,
+.dark-mode p{
+    color:white;
+}
+
+/* MOBILE VIEW */
+
+@media(max-width:768px){
+
 @media(max-width:768px){
 
 .hero{
@@ -65,3 +394,270 @@
 }
 
 }
+
+/* NOTICE MOBILE */
+
+.floating-notice{
+    padding:14px 0;
+}
+
+.floating-notice h2{
+    font-size:24px;
+}
+
+.notice-track{
+    gap:40px;
+}
+
+.notice-track span{
+    font-size:15px;
+}
+
+/* MESSAGE MOBILE */
+
+.chairman,
+.principal{
+    padding:40px 20px;
+}
+
+.chairman h2,
+.principal h2{
+    font-size:28px;
+}
+
+.message-container{
+    flex-direction:column;
+    text-align:center;
+}
+
+.message-container img{
+    width:180px;
+    height:180px;
+}
+
+.message-text h3{
+    font-size:24px;
+}
+
+.message-text p{
+    font-size:15px;
+    line-height:1.7;
+    text-align:justify;
+}
+
+.read-btn{
+    font-size:14px;
+    padding:10px 16px;
+}
+
+/* FOOTER */
+
+footer{
+    font-size:13px;
+}
+
+}
+
+/* END MOBILE */
+
+</style>
+
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header>
+
+<div class="logo-area">
+
+<img src="logo.jpg" alt="School Logo">
+
+<div class="logo-text">
+
+<h1>Maryam Memorial Institute</h1>
+
+<p>Tawheed Bagh, Pandithpora, Qaziabad, Kupwara</p>
+
+</div>
+
+</div>
+
+<div id="clock"></div>
+
+</header>
+
+<!-- NAVBAR -->
+
+<nav>
+
+<a href="index.html">Home</a>
+
+<a href="about.html">About</a>
+
+<a href="notice.html">Notice Board</a>
+
+<a href="teachers.html">Teachers</a>
+
+<a href="gallery.html">Gallery</a>
+
+<a href="alumni.html">Proud Alumni</a>
+
+<a href="contact.html">Contact</a>
+
+</nav>
+
+<!-- HERO SECTION -->
+
+<section class="hero">
+
+<div class="hero-content">
+
+<img src="logo.jpg" alt="School Logo">
+
+<h2>
+Welcome to <br>
+Maryam Memorial Institute
+</h2>
+
+<p>Education for a Better Future</p>
+
+</div>
+
+</section>
+
+<!-- FLOATING NOTICE -->
+
+<section class="floating-notice">
+
+<h2>Latest Notices</h2>
+
+<div class="notice-wrapper">
+
+<div class="notice-track">
+
+<span>📢 Admissions Open for 2026 Session</span>
+
+<span>📢 Parent-Teacher Meeting on Friday</span>
+
+<span>📢 Summer Vacation Starts June 10</span>
+
+<span>📢 Annual Function Next Month</span>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- CHAIRMAN MESSAGE -->
+
+<section class="chairman">
+
+<h2>Chairman's Message</h2>
+
+<div class="message-container">
+
+<img src="chairman.jpg" alt="Chairman Photo">
+
+<div class="message-text">
+
+<h3>Chairman</h3>
+
+<p>
+Welcome to Maryam Memorial Institute.
+Our aim is to provide quality education,
+discipline, and a bright future for students.
+</p>
+
+<a href="chairman.html" class="read-btn">
+
+Read Full Message
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- PRINCIPAL MESSAGE -->
+
+<section class="principal">
+
+<h2>Principal's Message</h2>
+
+<div class="message-container">
+
+<img src="principal.jpg" alt="Principal Photo">
+
+<div class="message-text">
+
+<h3>Mohammad Iqbal Rather</h3>
+
+<p>
+Welcome to Maryam Memorial Institute.
+We are committed to academic excellence,
+discipline, and moral values for every student.
+</p>
+
+<a href="principal.html" class="read-btn">
+
+Read Full Message
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- DARK MODE BUTTON -->
+
+<button class="dark-btn" onclick="toggleDarkMode()">
+
+🌙 Dark Mode
+
+</button>
+
+<!-- FOOTER -->
+
+<footer>
+
+<p>© 2026 Maryam Memorial Institute</p>
+
+<p>Tawheed Bagh, Pandithpora, Qaziabad, Kupwara</p>
+
+</footer>
+
+<!-- JAVASCRIPT -->
+
+<script>
+
+function updateClock(){
+
+const now = new Date();
+
+document.getElementById("clock").innerHTML =
+now.toLocaleTimeString();
+
+}
+
+setInterval(updateClock,1000);
+
+updateClock();
+
+function toggleDarkMode(){
+
+document.body.classList.toggle("dark-mode");
+
+}
+
+</script>
+
+</body>
+
+</html>
