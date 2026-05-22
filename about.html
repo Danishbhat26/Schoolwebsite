@@ -280,10 +280,16 @@ sports, and overall personality growth.
 
 </footer>
 <!-- FIREBASE CONNECTION -->
-
 <script type="module">
 
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+
+import {
+getFirestore,
+collection,
+getDocs
+}
+from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
 
 const firebaseConfig = {
 
@@ -303,7 +309,22 @@ appId: "1:420137044017:web:719af78f43d0d27a4fad10"
 
 const app = initializeApp(firebaseConfig);
 
-console.log("Firebase Connected Successfully");
+const db = getFirestore(app);
+
+async function loadNotices(){
+
+const querySnapshot =
+await getDocs(collection(db, "notices"));
+
+querySnapshot.forEach((doc) => {
+
+console.log(doc.data().message);
+
+});
+
+}
+
+loadNotices();
 
 </script>
 </body>
