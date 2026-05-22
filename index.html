@@ -14,6 +14,8 @@ content="ih_zt6pQjEG6SNBw5zhYPxEae4ZZ7dlbZaTARXYnrTM" />
 
 <style>
 
+/* RESET */
+
 *{
     margin:0;
     padding:0;
@@ -35,7 +37,7 @@ body{
 header{
     background:#002855;
     color:white;
-    padding:15px 25px;
+    padding:15px;
     display:flex;
     justify-content:space-between;
     align-items:center;
@@ -58,7 +60,7 @@ header{
 }
 
 .logo-text h1{
-    font-size:38px;
+    font-size:36px;
 }
 
 .logo-text p{
@@ -67,11 +69,11 @@ header{
 }
 
 #clock{
-    font-size:22px;
+    font-size:24px;
     font-weight:bold;
 }
 
-/* NAVIGATION */
+/* NAVBAR */
 
 nav{
     background:#004080;
@@ -101,15 +103,15 @@ nav a:hover{
     color:black;
 }
 
-/* HERO */
+/* HERO SECTION */
 
 .hero{
 
-    min-height:100vh;
+    height:100vh;
 
     background-image:
-    linear-gradient(rgba(0,0,0,0.25),
-    rgba(0,0,0,0.25)),
+    linear-gradient(rgba(0,0,0,0.35),
+    rgba(0,0,0,0.35)),
     url("school-building.jpg");
 
     background-size:cover;
@@ -132,6 +134,7 @@ nav a:hover{
 }
 
 .hero-content{
+    width:100%;
     max-width:900px;
 }
 
@@ -175,13 +178,12 @@ nav a:hover{
 .notice-wrapper{
     width:100%;
     overflow:hidden;
-    position:relative;
 }
 
 .notice-track{
     display:flex;
-    width:max-content;
     gap:60px;
+    width:max-content;
     animation:scrollNotice 18s linear infinite;
 }
 
@@ -204,16 +206,19 @@ nav a:hover{
 
 }
 
-/* MESSAGE SECTIONS */
+/* MESSAGE SECTION */
 
 .chairman,
 .principal{
     padding:70px 40px;
-    background:white;
 }
 
 .chairman{
     background:#eef5ff;
+}
+
+.principal{
+    background:white;
 }
 
 .chairman h2,
@@ -271,19 +276,6 @@ nav a:hover{
     background:#002855;
 }
 
-/* FOOTER */
-
-footer{
-    background:#002855;
-    color:white;
-    text-align:center;
-    padding:20px;
-}
-
-footer p{
-    margin-bottom:8px;
-}
-
 /* DARK MODE BUTTON */
 
 .dark-btn{
@@ -298,6 +290,19 @@ footer p{
     cursor:pointer;
     z-index:1000;
     font-size:13px;
+}
+
+/* FOOTER */
+
+footer{
+    background:#002855;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+footer p{
+    margin-bottom:8px;
 }
 
 /* DARK MODE */
@@ -318,9 +323,11 @@ footer p{
     color:white;
 }
 
-/* MOBILE */
+/* MOBILE VIEW */
 
 @media(max-width:768px){
+
+/* HEADER */
 
 header{
     flex-direction:column;
@@ -333,8 +340,8 @@ header{
 }
 
 .logo-area img{
-    width:60px;
-    height:60px;
+    width:65px;
+    height:65px;
 }
 
 .logo-text h1{
@@ -349,7 +356,7 @@ header{
     font-size:18px;
 }
 
-/* NAVIGATION */
+/* NAVBAR */
 
 nav{
     gap:5px;
@@ -361,42 +368,71 @@ nav a{
     padding:6px 10px;
 }
 
-/* MOBILE HERO FIX */
+/* HERO MOBILE PERFECT FIX */
 
 .hero{
 
-    min-height:55vh;
+    height:70vh;
 
-    background-size:contain;
+    background-image:
+    linear-gradient(rgba(0,0,0,0.35),
+    rgba(0,0,0,0.35)),
+    url("school-building.jpg");
 
-    background-position:center top;
+    background-size:cover;
+
+    background-position:center;
 
     background-repeat:no-repeat;
 
-    background-color:#002855;
+    display:flex;
 
-    padding:20px 15px;
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    color:white;
+
+    padding:15px;
 }
 
 .hero-content{
-    margin-top:-70px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
 }
 
 .hero-content img{
+
     width:70px;
+
     margin-bottom:10px;
 }
 
 .hero h2{
-    font-size:24px;
-    line-height:1.4;
+
+    font-size:28px;
+
+    line-height:1.3;
+
+    margin-bottom:10px;
 }
 
 .hero p{
-    font-size:14px;
+
+    font-size:15px;
+
+    margin-top:5px;
 }
 
-/* FLOATING NOTICE MOBILE */
+/* NOTICE MOBILE */
 
 .floating-notice{
     padding:14px 0;
@@ -451,11 +487,15 @@ nav a{
     padding:10px 16px;
 }
 
+/* FOOTER */
+
 footer{
     font-size:13px;
 }
 
 }
+
+/* END MOBILE */
 
 </style>
 
@@ -485,7 +525,7 @@ footer{
 
 </header>
 
-<!-- NAVIGATION -->
+<!-- NAVBAR -->
 
 <nav>
 
@@ -505,7 +545,7 @@ footer{
 
 </nav>
 
-<!-- HERO -->
+<!-- HERO SECTION -->
 
 <section class="hero">
 
@@ -612,7 +652,7 @@ Read Full Message
 
 </section>
 
-<!-- DARK MODE -->
+<!-- DARK MODE BUTTON -->
 
 <button class="dark-btn" onclick="toggleDarkMode()">
 
@@ -654,53 +694,7 @@ document.body.classList.toggle("dark-mode");
 }
 
 </script>
-<script type="module">
 
-import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
-
-import {
-getFirestore,
-collection,
-getDocs
-}
-from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
-
-const firebaseConfig = {
-
-apiKey: "AIzaSyDmXis4j9q2GpG2SDdcQjQlqPOdhmxTpsE",
-
-authDomain: "schoolwebsite-3e80c.firebaseapp.com",
-
-projectId: "schoolwebsite-3e80c",
-
-storageBucket: "schoolwebsite-3e80c.firebasestorage.app",
-
-messagingSenderId: "420137044017",
-
-appId: "1:420137044017:web:719af78f43d0d27a4fad10"
-
-};
-
-const app = initializeApp(firebaseConfig);
-
-const db = getFirestore(app);
-
-async function loadNotices(){
-
-const querySnapshot =
-await getDocs(collection(db, "notices"));
-
-querySnapshot.forEach((doc) => {
-
-console.log(doc.data().message);
-
-});
-
-}
-
-loadNotices();
-
-</script>
 </body>
 
 </html>
