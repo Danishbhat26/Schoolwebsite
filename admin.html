@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Admin Panel</title>
+
+<style>
+
+body{
+    font-family:Arial;
+    background:#f4f6f9;
+    padding:40px;
+    text-align:center;
+}
+
+h1{
+    color:#002855;
+    margin-bottom:30px;
+}
+
+input{
+    width:300px;
+    padding:12px;
+    font-size:16px;
+}
+
+button{
+    padding:12px 20px;
+    background:#004080;
+    color:white;
+    border:none;
+    cursor:pointer;
+    margin-left:10px;
+}
+
+#result{
+    margin-top:30px;
+    font-size:22px;
+    color:green;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h1>School Admin Panel</h1>
+
+<input type="text" id="noticeInput"
+placeholder="Enter Notice">
+
+<button onclick="addNotice()">
+Add Notice
+</button>
+
+<div id="result"></div>
+
+<script>
+
+function addNotice(){
+
+const notice =
+document.getElementById("noticeInput").value;
+
+document.getElementById("result").innerHTML =
+"Notice Added: " + notice;
+
+}
+
+</script>
+
+</body>
+
+</html>
