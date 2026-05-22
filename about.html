@@ -279,54 +279,7 @@ sports, and overall personality growth.
 <p>Tawheed Bagh, Pandithpora, Qaziabad, Kupwara</p>
 
 </footer>
-<!-- FIREBASE CONNECTION -->
-<script type="module">
 
-import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
-
-import {
-getFirestore,
-collection,
-getDocs
-}
-from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
-
-const firebaseConfig = {
-
-apiKey: "AIzaSyDmXis4j9q2GpG2SDdcQjQlqPOdhmxTpsE",
-
-authDomain: "schoolwebsite-3e80c.firebaseapp.com",
-
-projectId: "schoolwebsite-3e80c",
-
-storageBucket: "schoolwebsite-3e80c.firebasestorage.app",
-
-messagingSenderId: "420137044017",
-
-appId: "1:420137044017:web:719af78f43d0d27a4fad10"
-
-};
-
-const app = initializeApp(firebaseConfig);
-
-const db = getFirestore(app);
-
-async function loadNotices(){
-
-const querySnapshot =
-await getDocs(collection(db, "notices"));
-
-querySnapshot.forEach((doc) => {
-
-console.log(doc.data().message);
-
-});
-
-}
-
-loadNotices();
-
-</script>
 </body>
 
 </html>
