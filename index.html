@@ -694,61 +694,7 @@ document.body.classList.toggle("dark-mode");
 }
 
 </script>
-<script type="module">
 
-import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
-
-import {
-getFirestore,
-collection,
-getDocs
-}
-from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
-
-const firebaseConfig = {
-
-apiKey: "AIzaSyCiWP99IulD-swK3iICxbP11TnJU6cBKe0",
-
-authDomain: "myschoolwebsite-4e9eb.firebaseapp.com",
-
-projectId: "myschoolwebsite-4e9eb",
-
-storageBucket: "myschoolwebsite-4e9eb.firebasestorage.app",
-
-messagingSenderId: "315414108823",
-
-appId: "1:315414108823:web:4feef940dbab561af067d2"
-
-};
-
-const app = initializeApp(firebaseConfig);
-
-const db = getFirestore(app);
-
-async function loadNotices(){
-
-const querySnapshot =
-await getDocs(collection(db,"notices"));
-
-const noticeContainer =
-document.getElementById("noticeContainer");
-
-noticeContainer.innerHTML = "";
-
-querySnapshot.forEach((doc)=>{
-
-const notice = doc.data().message;
-
-noticeContainer.innerHTML +=
-`<span>📢 ${notice}</span>`;
-
-});
-
-}
-
-loadNotices();
-
-</script>
 </body>
 
 </html>
