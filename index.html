@@ -686,7 +686,29 @@ document.body.classList.toggle("dark-mode");
 }
 
 </script>
+<script>
 
+fetch("notices.json")
+
+.then(response => response.json())
+
+.then(data => {
+
+const noticeContainer =
+document.getElementById("noticeContainer");
+
+noticeContainer.innerHTML = "";
+
+data.forEach(notice => {
+
+noticeContainer.innerHTML +=
+`<span>📢 ${notice.title}</span>`;
+
+});
+
+});
+
+</script>
 </body>
 
 </html>
