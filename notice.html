@@ -3,223 +3,273 @@
 
 <head>
 
-    <meta charset="UTF-8">
+<meta charset="UTF-8">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Notice Board - Maryam Memorial Institute</title>
+<title>Notice Board - Maryam Memorial Institute</title>
 
-    <style>
+<style>
 
-        *{
-            margin:0;
-            padding:0;
-            box-sizing:border-box;
-        }
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
 
-        body{
-            font-family:Arial, sans-serif;
-            background:#f4f6f9;
-        }
+body{
+    font-family:Arial,sans-serif;
+    background:#f4f6f9;
+}
 
-        /* HEADER */
+/* HEADER */
 
-        header{
-            background:#002855;
-            color:white;
-            text-align:center;
-            padding:25px;
-        }
+header{
+    background:#002855;
+    color:white;
+    text-align:center;
+    padding:25px;
+}
 
-        header img{
-            width:100px;
-            border-radius:50%;
-            background:white;
-            padding:5px;
-            margin-bottom:15px;
-        }
+header img{
+    width:100px;
+    border-radius:50%;
+    background:white;
+    padding:5px;
+    margin-bottom:15px;
+}
 
-        header h1{
-            font-size:42px;
-            margin-bottom:10px;
-        }
+header h1{
+    font-size:42px;
+    margin-bottom:10px;
+}
 
-        header p{
-            font-size:18px;
-        }
+header p{
+    font-size:18px;
+}
 
-        /* NAVBAR */
+/* NAVBAR */
 
-        nav{
-            background:#004080;
-            padding:15px;
-            text-align:center;
-        }
+nav{
+    background:#004080;
+    padding:15px;
+    text-align:center;
+}
 
-        nav a{
-            color:white;
-            text-decoration:none;
-            margin:15px;
-            font-size:18px;
-            font-weight:bold;
-        }
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:15px;
+    font-size:18px;
+    font-weight:bold;
+    transition:0.3s;
+}
 
-        nav a:hover{
-            color:yellow;
-        }
+nav a:hover{
+    color:yellow;
+}
 
-        /* NOTICE SECTION */
+/* NOTICE SECTION */
 
-        .notice-section{
-            padding:70px 40px;
-        }
+.notice-section{
+    padding:70px 40px;
+}
 
-        .notice-section h2{
-            text-align:center;
-            font-size:45px;
-            color:#002855;
-            margin-bottom:40px;
-        }
+.notice-section h2{
+    text-align:center;
+    font-size:45px;
+    color:#002855;
+    margin-bottom:40px;
+}
 
-        .notice-container{
-            max-width:900px;
-            margin:auto;
-        }
+.notice-container{
+    max-width:900px;
+    margin:auto;
+}
 
-        .notice-card{
-            background:white;
-            padding:25px;
-            margin-bottom:25px;
-            border-left:8px solid #004080;
-            border-radius:10px;
-            box-shadow:0 0 10px rgba(0,0,0,0.1);
-            transition:0.3s;
-        }
+.notice-card{
+    background:white;
+    padding:25px;
+    margin-bottom:25px;
+    border-left:8px solid #004080;
+    border-radius:10px;
+    box-shadow:0 0 10px rgba(0,0,0,0.1);
+    transition:0.3s;
+}
 
-        .notice-card:hover{
-            transform:translateX(10px);
-        }
+.notice-card:hover{
+    transform:translateX(10px);
+}
 
-        .notice-card h3{
-            color:#002855;
-            margin-bottom:10px;
-        }
+.notice-card h3{
+    color:#002855;
+    margin-bottom:10px;
+    font-size:28px;
+}
 
-        .notice-card p{
-            font-size:18px;
-            color:#444;
-        }
+.notice-card .date{
+    color:#666;
+    font-size:15px;
+    margin-bottom:15px;
+}
 
-        /* FOOTER */
+.notice-card p{
+    font-size:18px;
+    color:#444;
+    line-height:1.8;
+}
 
-        footer{
-            background:#002855;
-            color:white;
-            text-align:center;
-            padding:25px;
-            margin-top:40px;
-        }
+/* FOOTER */
 
-    </style>
+footer{
+    background:#002855;
+    color:white;
+    text-align:center;
+    padding:25px;
+    margin-top:40px;
+}
+
+/* MOBILE VIEW */
+
+@media(max-width:768px){
+
+header h1{
+    font-size:28px;
+}
+
+header p{
+    font-size:14px;
+}
+
+nav{
+    padding:10px;
+}
+
+nav a{
+    display:inline-block;
+    margin:5px;
+    font-size:14px;
+}
+
+.notice-section{
+    padding:40px 20px;
+}
+
+.notice-section h2{
+    font-size:30px;
+}
+
+.notice-card{
+    padding:18px;
+}
+
+.notice-card h3{
+    font-size:22px;
+}
+
+.notice-card p{
+    font-size:15px;
+}
+
+footer{
+    font-size:13px;
+}
+
+}
+
+</style>
 
 </head>
 
 <body>
 
-    <!-- HEADER -->
+<!-- HEADER -->
 
-    <header>
+<header>
 
-        <img src="logo.jpg" alt="School Logo">
+<img src="logo.jpg" alt="School Logo">
 
-        <h1>Maryam Memorial Institute</h1>
+<h1>Maryam Memorial Institute</h1>
 
-        <p>Tawheed Bagh, Pandithpora, Qaziabad, Kupwara</p>
+<p>Tawheed Bagh, Pandithpora, Qaziabad, Kupwara</p>
 
-    </header>
+</header>
 
-    <!-- NAVBAR -->
+<!-- NAVBAR -->
 
-    <nav>
+<nav>
 
-        <a href="index.html">Home</a>
+<a href="index.html">Home</a>
 
-        <a href="about.html">About</a>
+<a href="about.html">About</a>
 
-        <a href="notice.html">Notice Board</a>
+<a href="notice.html">Notice Board</a>
 
-        <a href="gallery.html">Gallery</a>
+<a href="gallery.html">Gallery</a>
 
-        <a href="teachers.html">Teachers</a>
+<a href="teachers.html">Teachers</a>
 
-        <a href="contact.html">Contact</a>
+<a href="contact.html">Contact</a>
+<a href="proudalumni.html">Proud Alumni</a>
 
-    </nav>
+</nav>
 
-    <!-- NOTICE BOARD -->
+<!-- NOTICE BOARD -->
 
-    <section class="notice-section">
+<section class="notice-section">
 
-        <h2>School Notices</h2>
+<h2>School Notices</h2>
 
-        <div class="notice-container">
+<div class="notice-container" id="noticeBoard"></div>
 
-            <div class="notice-card">
+</section>
 
-                <h3>I am currently testing</h3>
+<!-- FOOTER -->
 
-                <p>
-                    its me danish bhat testing
-                </p>
+<footer>
 
-            </div>
+<p>© 2026 Maryam Memorial Institute</p>
 
-            <div class="notice-card">
+<p>Tawheed Bagh, Pandithpora, Qaziabad, Kupwara</p>
 
-                <h3>Parent-Teacher Meeting on Friday</h3>
+</footer>
 
-                <p>
-                    Parents are requested to attend the meeting on Friday
-                    to discuss student performance and progress.
-                </p>
+<!-- NOTICE JSON SCRIPT -->
 
-            </div>
+<script>
 
-            <div class="notice-card">
+fetch("notices.json")
 
-                <h3>Summer Vacation Starts June 10</h3>
+.then(response => response.json())
 
-                <p>
-                    Summer vacations will begin from June 10.
-                    School will reopen after the holidays.
-                </p>
+.then(data => {
 
-            </div>
+const noticeBoard =
+document.getElementById("noticeBoard");
 
-            <div class="notice-card">
+noticeBoard.innerHTML = "";
 
-                <h3>Annual Function Next Month</h3>
+data.forEach(notice => {
 
-                <p>
-                    The annual school function will be held next month.
-                    Students are encouraged to participate in activities.
-                </p>
+noticeBoard.innerHTML += `
 
-            </div>
+<div class="notice-card">
 
-        </div>
+<h3>${notice.title}</h3>
 
-    </section>
+<div class="date">${notice.date}</div>
 
-    <!-- FOOTER -->
+<p>${notice.details}</p>
 
-    <footer>
+</div>
 
-        <p>© 2026 Maryam Memorial Institute</p>
+`;
 
-        <p>Tawheed Bagh, Pandithpora, Qaziabad, Kupwara</p>
+});
 
-    </footer>
+});
+
+</script>
 
 </body>
 
