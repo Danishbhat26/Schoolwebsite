@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Gallery - Maryam Memorial Institute</title>
+
+<style>
+
+/* RESET */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial,sans-serif;
+    background:#f4f6f9;
+}
+
+/* HEADER */
+
+header{
+    background:#002855;
+    color:white;
+    text-align:center;
+    padding:25px;
+}
+
+header img{
+    width:100px;
+    border-radius:50%;
+    background:white;
+    padding:5px;
+    margin-bottom:15px;
+}
+
+header h1{
+    font-size:42px;
+    margin-bottom:10px;
+}
+
+header p{
+    font-size:18px;
+}
+
+/* NAVBAR */
+
+nav{
+    background:#004080;
+    padding:15px;
+    text-align:center;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:15px;
+    font-size:18px;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:yellow;
+}
+
+/* GALLERY SECTION */
+
+.gallery-section{
+    padding:60px 20px;
+}
+
+.gallery-section h2{
+    text-align:center;
+    font-size:45px;
+    color:#002855;
+    margin-bottom:40px;
+}
+
+/* GALLERY GRID */
+
+.gallery-grid{
+    display:grid;
+    grid-template-columns:
+    repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+    max-width:1300px;
+    margin:auto;
+}
+
+.gallery-grid img{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+    border-radius:12px;
+    box-shadow:0 0 10px rgba(0,0,0,0.2);
+    transition:0.3s;
+}
+
+.gallery-grid img:hover{
+    transform:scale(1.04);
+}
+
+/* FOOTER */
+
+footer{
+    background:#002855;
+    color:white;
+    text-align:center;
+    padding:25px;
+    margin-top:40px;
+}
+
+footer p{
+    margin-bottom:8px;
+}
+
+/* MOBILE VIEW */
+
+@media(max-width:768px){
+
+header h1{
+    font-size:28px;
+}
+
+header p{
+    font-size:14px;
+}
+
+nav{
+    padding:10px;
+}
+
+nav a{
+    display:inline-block;
+    margin:5px;
+    font-size:14px;
+}
+
+.gallery-section{
+    padding:40px 15px;
+}
+
+.gallery-section h2{
+    font-size:30px;
+}
+
+.gallery-grid img{
+    height:220px;
+}
+
+footer{
+    font-size:13px;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header>
+
+<img src="logo.jpg" alt="School Logo">
+
+<h1>Maryam Memorial Institute</h1>
+
+<p>Tawheed Bagh Pandithpora Qaziabad, Kupwara 193302</p>
+
+</header>
+
+<!-- NAVBAR -->
+
+<nav>
+
+<a href="index.html">Home</a>
+
+<a href="about.html">About</a>
+
+<a href="notice.html">Notice Board</a>
+
+<a href="gallery.html">Gallery</a>
+
+<a href="teachers.html">Teachers</a>
+
+<a href="contactus.html">Contact Us</a>
+<a href="proudalumni.html">Proud Alumni</a>
+
+</nav>
+
+<!-- GALLERY -->
+
+<section class="gallery-section">
+
+<h2>School Gallery</h2>
+
+<div class="gallery-grid">
+
+<img src="gallery/pic1.jpeg" alt="">
+<img src="gallery/pic2.jpg" alt="">
+<img src="gallery/pic3.jpg" alt="">
+<img src="gallery/pic4.jpg" alt="">
+<img src="gallery/pic5.jpg" alt="">
+<img src="gallery/pic6.jpg" alt="">
+<img src="gallery/pic7.jpg" alt="">
+<img src="gallery/pic8.jpg" alt="">
+<img src="gallery/pic9.jpg" alt="">
+<img src="gallery/pic10.jpg" alt="">
+<img src="gallery/pic11.jpg" alt="">
+<img src="gallery/pic12.jpg" alt="">
+<img src="gallery/pic13.jpg" alt="">
+<img src="gallery/pic14.jpg" alt="">
+<img src="gallery/pic15.jpg" alt="">
+<img src="gallery/pic16.jpg" alt="">
+<img src="gallery/pic17.jpg" alt="">
+<img src="gallery/pic18.jpg" alt="">
+<img src="gallery/pic19.jpg" alt="">
+<img src="gallery/pic20.jpg" alt="">
+<img src="gallery/pic21.jpg" alt="">
+<img src="gallery/pic22.jpg" alt="">
+<img src="gallery/pic23.jpg" alt="">
+<img src="gallery/pic24.jpg" alt="">
+<img src="gallery/pic25.jpg" alt="">
+<img src="gallery/pic26.jpg" alt="">
+<img src="gallery/pic27.jpg" alt="">
+<img src="gallery/pic28.jpg" alt="">
+<img src="gallery/pic29.jpg" alt="">
+<img src="gallery/pic30.jpg" alt="">
+
+</div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+<p>© 2026 Maryam Memorial Institute</p>
+
+<p>Tawheed Bagh Pandithpora Qaziabad, Kupwara 193302</p>
+
+</footer>
+
+</body>
+
+</html>
