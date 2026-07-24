@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Manage Downloads</title>
+
+<link rel="stylesheet" href="dashboard.css">
+
+<style>
+
+.content{
+    margin-left:260px;
+    padding:40px;
+}
+
+.content h1{
+    color:#002855;
+    margin-bottom:30px;
+}
+
+.download-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:25px;
+}
+
+.download-card{
+
+    background:white;
+
+    border-radius:12px;
+
+    padding:20px;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.12);
+
+    transition:.3s;
+
+}
+
+.download-card:hover{
+
+    transform:translateY(-5px);
+
+}
+
+.download-card h3{
+
+    color:#002855;
+
+    margin-bottom:10px;
+
+}
+
+.category{
+
+    display:inline-block;
+
+    background:#004080;
+
+    color:white;
+
+    padding:5px 12px;
+
+    border-radius:20px;
+
+    font-size:13px;
+
+    margin-bottom:15px;
+
+}
+
+.download-card p{
+
+    color:#555;
+
+    line-height:1.6;
+
+}
+
+.button-group{
+
+    margin-top:20px;
+
+    display:flex;
+
+    gap:10px;
+
+}
+
+.downloadBtn{
+
+    flex:1;
+
+    background:#198754;
+
+    color:white;
+
+    text-align:center;
+
+    text-decoration:none;
+
+    padding:12px;
+
+    border-radius:8px;
+
+    font-weight:bold;
+
+}
+
+.downloadBtn:hover{
+
+    background:#146c43;
+
+}
+
+.deleteBtn{
+
+    flex:1;
+
+    background:#dc3545;
+
+    color:white;
+
+    border:none;
+
+    border-radius:8px;
+
+    cursor:pointer;
+
+    font-weight:bold;
+
+}
+
+.deleteBtn:hover{
+
+    background:#b02a37;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="sidebar">
+
+<h2>MMI Admin</h2>
+
+<ul>
+
+<li><a href="dashboard.html">🏠 Dashboard</a></li>
+
+<li><a href="manage-notices.html">📢 Manage Notices</a></li>
+
+<li><a href="gallery-admin.html">📤 Upload Gallery Images</a></li>
+
+<li><a href="manage-gallery.html">🗑 Delete Gallery Images</a></li>
+
+<li><a href="teacher-admin.html">👨‍🏫 Add Teacher</a></li>
+
+<li><a href="manage-teachers.html">🗑 Delete Teachers</a></li>
+
+<li><a href="alumni-admin.html">🎓 Add Alumni</a></li>
+
+<li><a href="manage-alumni.html">🗑 Delete Alumni</a></li>
+
+<li><a href="downloads-admin.html">📄 Upload Downloads</a></li>
+
+<li><a href="manage-downloads.html">🗂 Manage Downloads</a></li>
+<a href="manage-grievances.html">Manage Grievances</a>
+
+<li><a href="admin.html">🚪 Logout</a></li>
+
+</ul>
+
+</div>
+
+<div class="content">
+
+<h1>📄 Manage Downloads</h1>
+
+<div id="downloadsList" class="download-grid">
+
+</div>
+
+</div>
+
+<script type="module" src="manage-downloads.js"></script>
+
+</body>
+
+</html>
