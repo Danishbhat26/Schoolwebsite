@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Notice Management</title>
+
+<link rel="stylesheet" href="dashboard.css">
+
+<style>
+
+.content{
+    margin-left:260px;
+    padding:40px;
+}
+
+.content h1{
+    color:#002855;
+    margin-bottom:30px;
+}
+
+label{
+    font-size:18px;
+    font-weight:bold;
+    color:#002855;
+}
+
+input, textarea{
+    width:100%;
+    padding:15px;
+    margin-top:10px;
+    margin-bottom:25px;
+    font-size:16px;
+    border:1px solid #ccc;
+    border-radius:8px;
+    outline:none;
+}
+
+textarea{
+    height:180px;
+    resize:vertical;
+}
+
+button{
+    background:#004080;
+    color:white;
+    border:none;
+    padding:14px 30px;
+    font-size:17px;
+    border-radius:8px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+button:hover{
+    background:#002855;
+}
+
+#status{
+    margin-top:20px;
+    font-size:17px;
+    font-weight:bold;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="sidebar">
+
+<h2>MMI Admin</h2>
+
+<ul>
+
+<li onclick="window.location.href='dashboard.html'">
+🏠 Dashboard
+</li>
+
+<li>
+📢 Manage Notices
+</li>
+
+<li onclick="window.location.href='dashboard.html'">
+🖼 Manage Gallery
+</li>
+
+<li onclick="window.location.href='dashboard.html'">
+👨‍🏫 Manage Teachers
+</li>
+
+<li onclick="window.location.href='dashboard.html'">
+🎓 Manage Alumni
+</li>
+
+<li onclick="window.location.href='admin.html'">
+🚪 Logout
+</li>
+
+</ul>
+
+</div>
+
+<div class="content">
+
+<h1>📢 Add New Notice</h1>
+
+<label>Notice Title</label>
+
+<input
+type="text"
+id="noticeTitle"
+placeholder="Enter Notice Title">
+
+<label>Notice Details</label>
+
+<textarea
+id="noticeDetails"
+placeholder="Write complete notice here..."></textarea>
+
+<button id="saveNotice">
+
+Save Notice
+
+</button>
+
+<p id="status"></p>
+
+</div>
+
+<script type="module" src="notice-admin.js"></script>
+
+</body>
+
+</html>
