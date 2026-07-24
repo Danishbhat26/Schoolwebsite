@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Upload Downloads</title>
+
+<link rel="stylesheet" href="dashboard.css">
+
+<style>
+
+.content{
+    margin-left:260px;
+    padding:40px;
+}
+
+.content h1{
+    color:#002855;
+    margin-bottom:30px;
+}
+
+.upload-box{
+
+    max-width:700px;
+
+    background:#fff;
+
+    padding:30px;
+
+    border-radius:12px;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
+
+}
+
+.upload-box label{
+
+    display:block;
+
+    margin-top:18px;
+
+    margin-bottom:8px;
+
+    font-weight:bold;
+
+    color:#002855;
+
+}
+
+.upload-box input,
+.upload-box select,
+.upload-box textarea{
+
+    width:100%;
+
+    padding:12px;
+
+    border:1px solid #ccc;
+
+    border-radius:8px;
+
+    font-size:15px;
+
+    box-sizing:border-box;
+
+}
+
+.upload-box textarea{
+
+    resize:vertical;
+
+    min-height:120px;
+
+}
+
+button{
+
+    margin-top:25px;
+
+    background:#004080;
+
+    color:white;
+
+    border:none;
+
+    padding:14px 30px;
+
+    border-radius:8px;
+
+    font-size:16px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+button:hover{
+
+    background:#002855;
+
+}
+
+#status{
+
+    margin-top:20px;
+
+    font-weight:bold;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="sidebar">
+
+<h2>MMI Admin</h2>
+
+<ul>
+
+<li><a href="dashboard.html">🏠 Dashboard</a></li>
+
+<li><a href="manage-notices.html">📢 Manage Notices</a></li>
+
+<li><a href="gallery-admin.html">📤 Upload Gallery Images</a></li>
+
+<li><a href="manage-gallery.html">🗑 Delete Gallery Images</a></li>
+
+<li><a href="teacher-admin.html">👨‍🏫 Add Teacher</a></li>
+
+<li><a href="manage-teachers.html">🗑 Delete Teachers</a></li>
+
+<li><a href="alumni-admin.html">🎓 Add Alumni</a></li>
+
+<li><a href="manage-alumni.html">🗑 Delete Alumni</a></li>
+
+<li><a href="downloads-admin.html">📄 Upload Downloads</a></li>
+
+<li><a href="manage-downloads.html">🗂 Manage Downloads</a></li>
+
+<li><a href="admin.html">🚪 Logout</a></li>
+
+</ul>
+
+</div>
+
+<div class="content">
+
+<h1>📄 Upload New Document</h1>
+
+<div class="upload-box">
+
+<label>Document Title</label>
+
+<input
+type="text"
+id="pdfTitle"
+placeholder="Example: Admission Form 2026">
+
+<label>Category</label>
+
+<select id="pdfCategory">
+
+<option value="">Select Category</option>
+
+<option>Admission</option>
+
+<option>Notice</option>
+
+<option>Recruitment</option>
+
+<option>Result</option>
+
+<option>Tender</option>
+
+<option>Academic</option>
+
+<option>Circular</option>
+
+<option>Other</option>
+
+</select>
+
+<label>Description</label>
+
+<textarea
+id="pdfDescription"
+placeholder="Short description..."></textarea>
+
+<label>Google Drive Link</label>
+
+<input
+
+type="url"
+
+id="pdfLink"
+
+placeholder="Paste Google Drive Share Link Here">
+
+<button id="uploadBtn">
+
+💾 Save Document
+
+</button>
+
+<p id="status"></p>
+
+</div>
+
+</div>
+
+<script type="module" src="downloads-admin.js"></script>
+
+</body>
+
+</html>
