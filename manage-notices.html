@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Manage Notices</title>
+
+<link rel="stylesheet" href="dashboard.css">
+
+<style>
+
+.content{
+    margin-left:260px;
+    padding:40px;
+}
+
+h1{
+    color:#002855;
+    margin-bottom:30px;
+}
+
+.notice-card{
+
+    background:#fff;
+
+    border-left:6px solid #004080;
+
+    border-radius:10px;
+
+    padding:20px;
+
+    margin-bottom:20px;
+
+    box-shadow:0 4px 12px rgba(0,0,0,0.1);
+
+}
+
+.notice-card h3{
+
+    color:#002855;
+
+    margin-bottom:10px;
+
+}
+
+.notice-card p{
+
+    color:#444;
+
+    margin-bottom:10px;
+
+    line-height:1.6;
+
+}
+
+.notice-card small{
+
+    color:#666;
+
+}
+
+.deleteBtn{
+
+    background:#dc3545;
+
+    color:white;
+
+    border:none;
+
+    padding:10px 20px;
+
+    border-radius:6px;
+
+    cursor:pointer;
+
+    margin-top:15px;
+
+}
+
+.deleteBtn:hover{
+
+    background:#b02a37;
+
+}
+
+.addBtn{
+
+    background:#004080;
+
+    color:white;
+
+    text-decoration:none;
+
+    padding:12px 22px;
+
+    border-radius:8px;
+
+    display:inline-block;
+
+    margin-bottom:30px;
+
+}
+
+.addBtn:hover{
+
+    background:#002855;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="sidebar">
+
+<h2>MMI Admin</h2>
+
+<ul>
+<li><a href="dashboard.html">🏠 Dashboard</a></li>
+
+<li><a href="manage-notices.html">📢 Manage Notices</a></li>
+
+<li><a href="gallery-admin.html">📤 Upload Gallery Images</a></li>
+
+<li><a href="manage-gallery.html">🗑 Delete Gallery Images</a></li>
+
+<li><a href="teacher-admin.html">👨‍🏫 Add Teacher</a></li>
+
+<li><a href="manage-teachers.html">🗑 Delete Teachers</a></li>
+
+<li><a href="alumni-admin.html">🎓 Add Alumni</a></li>
+
+<li><a href="manage-alumni.html">🗑 Delete Alumni</a></li>
+<li><a href="downloads-admin.html">📄 Upload Downloads</a></li>
+
+<li><a href="manage-downloads.html">🗑 Manage Downloads</a></li>
+<a href="manage-grievances.html">Manage Grievances</a>
+
+<li id="logout">🚪 Logout</li>
+
+</ul>
+
+</div>
+
+<div class="content">
+
+<h1>📢 Notice Management</h1>
+
+<a href="notice-admin.html" class="addBtn">
+
+➕ Add New Notice
+
+</a>
+
+<div id="noticeList"></div>
+
+</div>
+<script>
+document.getElementById("logout").onclick=function(){
+    window.location.href="admin.html";
+};
+</script>
+<script type="module" src="manage-notices.js"></script>
+
+</body>
+
+</html>
