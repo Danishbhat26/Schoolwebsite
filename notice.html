@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Notice Board - Maryam Memorial Institute</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial,sans-serif;
+    background:#f4f6f9;
+}
+
+/* HEADER */
+
+header{
+    background:#002855;
+    color:white;
+    text-align:center;
+    padding:25px;
+}
+
+header img{
+    width:100px;
+    border-radius:50%;
+    background:white;
+    padding:5px;
+    margin-bottom:15px;
+}
+
+header h1{
+    font-size:42px;
+    margin-bottom:10px;
+}
+
+header p{
+    font-size:18px;
+}
+
+/* NAVBAR */
+
+nav{
+    background:#004080;
+    padding:15px;
+    text-align:center;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:15px;
+    font-size:18px;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:yellow;
+}
+
+/* NOTICE SECTION */
+
+.notice-section{
+    padding:70px 40px;
+}
+
+.notice-section h2{
+    text-align:center;
+    font-size:45px;
+    color:#002855;
+    margin-bottom:40px;
+}
+
+.notice-container{
+    max-width:900px;
+    margin:auto;
+}
+
+.notice-card{
+    background:white;
+    padding:25px;
+    margin-bottom:25px;
+    border-left:8px solid #004080;
+    border-radius:10px;
+    box-shadow:0 0 10px rgba(0,0,0,0.1);
+    transition:0.3s;
+}
+
+.notice-card:hover{
+    transform:translateX(10px);
+}
+
+.notice-card h3{
+    color:#002855;
+    margin-bottom:10px;
+    font-size:28px;
+}
+
+.notice-card .date{
+    color:#666;
+    font-size:15px;
+    margin-bottom:15px;
+}
+
+.notice-card p{
+    font-size:18px;
+    color:#444;
+    line-height:1.8;
+}
+
+/* FOOTER */
+
+footer{
+    background:#002855;
+    color:white;
+    text-align:center;
+    padding:25px;
+    margin-top:40px;
+}
+
+/* MOBILE VIEW */
+
+@media(max-width:768px){
+
+header h1{
+    font-size:28px;
+}
+
+header p{
+    font-size:14px;
+}
+
+nav{
+    padding:10px;
+}
+
+nav a{
+    display:inline-block;
+    margin:5px;
+    font-size:14px;
+}
+
+.notice-section{
+    padding:40px 20px;
+}
+
+.notice-section h2{
+    font-size:30px;
+}
+
+.notice-card{
+    padding:18px;
+}
+
+.notice-card h3{
+    font-size:22px;
+}
+
+.notice-card p{
+    font-size:15px;
+}
+
+footer{
+    font-size:13px;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header>
+
+<img src="logo.jpg" alt="School Logo">
+
+<h1>Maryam Memorial Institute</h1>
+
+<p>Tawheed Bagh Pandithpora Qaziabad, Kupwara 193302</p>
+
+</header>
+
+<!-- NAVBAR -->
+
+<nav>
+
+<a href="index.html">Home</a>
+
+<a href="about.html">About</a>
+
+<a href="notice.html">Notice Board</a>
+
+<a href="gallery.html">Gallery</a>
+
+<a href="teachers.html">Teachers</a>
+
+<a href="contactus.html">Contact Us</a>
+
+<a href="alumni.html">Proud Alumni</a>
+</nav>
+
+<!-- NOTICE BOARD -->
+
+<section class="notice-section">
+
+<h2>School Notices</h2>
+
+<div class="notice-container" id="noticeBoard"></div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+<p>© 2026 Maryam Memorial Institute</p>
+
+<p>Tawheed Bagh Pandithpora Qaziabad, Kupwara 193302</p>
+
+</footer>
+
+<script type="module">
+
+import { initializeApp } from "https://www.gstatic.com/firebasejs/12.1.0/firebase-app.js";
+
+import {
+    getFirestore,
+    collection,
+    getDocs,
+    query,
+    orderBy
+} from "https://www.gstatic.com/firebasejs/12.1.0/firebase-firestore.js";
+
+// Firebase Configuration
+
+const firebaseConfig = {
+    apiKey: "AIzaSyDWhujpz34s707mdQiC-YrLkgc7qAVKQ_I",
+    authDomain: "maryam-memorial-institute.firebaseapp.com",
+    projectId: "maryam-memorial-institute",
+    storageBucket: "maryam-memorial-institute.firebasestorage.app",
+    messagingSenderId: "808006642803",
+    appId: "1:808006642803:web:0af5a648a7859eff554e06"
+};
+
+// Initialize Firebase
+
+const app = initializeApp(firebaseConfig);
+
+const db = getFirestore(app);
+
+const noticeBoard = document.getElementById("noticeBoard");
+
+noticeBoard.innerHTML = "";
+
+// Read Notices
+
+const q = query(
+    collection(db, "notices"),
+    orderBy("createdAt", "desc")
+);
+
+const querySnapshot = await getDocs(q);
+
+querySnapshot.forEach((doc) => {
+
+    const notice = doc.data();
+
+    const date = notice.createdAt
+    ? new Intl.DateTimeFormat("en-GB", {
+        day: "2-digit",
+        month: "2-digit",
+        year: "numeric"
+      }).format(notice.createdAt.toDate())
+    : "Today";
+
+   noticeBoard.innerHTML += `
+
+<div class="notice-card">
+
+<h3>${notice.title}</h3>
+
+<div class="date">${date}</div>
+
+<p>${notice.details}</p>
+
+</div>
+
+`;
+
+});
+
+</script>
+
+</body>
+
+</html>
