@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Our Teachers - Maryam Memorial Institute</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:Arial,sans-serif;
+background:#f4f6f9;
+}
+
+/* HEADER */
+
+header{
+background:#002855;
+color:white;
+text-align:center;
+padding:25px;
+}
+
+header img{
+width:100px;
+border-radius:50%;
+background:white;
+padding:5px;
+margin-bottom:15px;
+}
+
+header h1{
+font-size:42px;
+margin-bottom:10px;
+}
+
+header p{
+font-size:18px;
+}
+
+/* NAVBAR */
+
+nav{
+background:#004080;
+padding:15px;
+text-align:center;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin:15px;
+font-size:18px;
+font-weight:bold;
+}
+
+nav a:hover{
+color:yellow;
+}
+
+/* PAGE TITLE */
+
+.page-title{
+text-align:center;
+font-size:42px;
+color:#002855;
+margin:50px 0 40px;
+}
+
+/* TEACHERS GRID */
+
+.teacher-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+gap:30px;
+
+max-width:1300px;
+
+margin:auto;
+
+padding:20px;
+
+}
+
+/* CARD */
+
+.teacher-card{
+
+background:white;
+
+border-radius:15px;
+
+overflow:hidden;
+
+box-shadow:0 0 15px rgba(0,0,0,.15);
+
+transition:.3s;
+
+}
+
+.teacher-card:hover{
+
+transform:translateY(-8px);
+
+}
+
+.teacher-card img{
+
+width:100%;
+
+height:300px;
+
+object-fit:contain;
+
+background:white;
+
+padding:10px;
+
+border-radius:15px 15px 0 0;
+
+}
+
+.teacher-info{
+
+padding:20px;
+
+}
+
+.teacher-info h2{
+
+color:#002855;
+
+margin-bottom:15px;
+
+}
+
+.teacher-info p{
+
+margin-bottom:10px;
+
+font-size:17px;
+
+}
+
+/* FOOTER */
+
+footer{
+
+background:#002855;
+
+color:white;
+
+text-align:center;
+
+padding:25px;
+
+margin-top:60px;
+
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+header h1{
+
+font-size:28px;
+
+}
+
+.page-title{
+
+font-size:30px;
+
+}
+
+.teacher-card img{
+
+height:250px;
+
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<img src="logo.jpg">
+
+<h1>Maryam Memorial Institute</h1>
+
+<p>Tawheed Bagh Pandithpora Qaziabad Kupwara 193302</p>
+
+</header>
+
+<nav>
+
+<a href="index.html">Home</a>
+
+<a href="about.html">About</a>
+
+<a href="notice.html">Notice Board</a>
+
+<a href="gallery.html">Gallery</a>
+
+<a href="teachers.html">Teachers</a>
+
+<a href="contactus.html">Contact Us</a>
+
+<a href="alumni.html">Proud Alumni</a>
+</nav>
+
+<h1 class="page-title">
+
+Our Teachers
+
+</h1>
+
+<div class="teacher-grid" id="teacherGrid">
+
+</div>
+
+<footer>
+
+<p>© 2026 Maryam Memorial Institute</p>
+
+<p>Tawheed Bagh Pandithpora Qaziabad Kupwara 193302</p>
+
+</footer>
+
+<script type="module">
+
+import { db } from "./firebase-config.js";
+
+import {
+
+collection,
+
+getDocs,
+
+query,
+
+orderBy
+
+} from "https://www.gstatic.com/firebasejs/12.1.0/firebase-firestore.js";
+
+const teacherGrid=document.getElementById("teacherGrid");
+
+async function loadTeachers(){
+
+const q=query(
+
+collection(db,"teachers"),
+
+orderBy("createdAt","desc")
+
+);
+
+const snapshot=await getDocs(q);
+
+snapshot.forEach(doc=>{
+
+const teacher=doc.data();
+
+teacherGrid.innerHTML+=`
+
+<div class="teacher-card">
+
+<img src="${teacher.photo}">
+
+<div class="teacher-info">
+
+<h2>${teacher.name}</h2>
+
+<p><b>Qualification:</b> ${teacher.qualification}</p>
+
+<p><b>Subject:</b> ${teacher.subject}</p>
+
+<p><b>Department:</b> ${teacher.department}</p>
+
+</div>
+
+</div>
+
+`;
+
+});
+
+}
+
+loadTeachers();
+
+</script>
+
+</body>
+
+</html>
