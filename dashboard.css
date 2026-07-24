@@ -1,0 +1,148 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    display:flex;
+    background:#f4f6f9;
+}
+
+/* =========================
+   SIDEBAR
+========================= */
+
+.sidebar{
+    width:260px;
+    height:100vh;
+    background:#002855;
+    color:white;
+    position:fixed;
+    left:0;
+    top:0;
+    overflow-y:auto;
+}
+
+.sidebar h2{
+    text-align:center;
+    padding:25px 15px;
+    font-size:28px;
+    border-bottom:2px solid rgba(255,255,255,.2);
+}
+
+/* Menu */
+
+.sidebar ul{
+    list-style:none;
+    margin-top:20px;
+}
+
+.sidebar ul li{
+    margin:8px 0;
+}
+
+/* Links */
+
+.sidebar ul li a{
+
+    display:block;
+    padding:16px 25px;
+    color:white;
+    text-decoration:none;
+    font-size:17px;
+    transition:0.3s;
+
+}
+
+
+
+/* Logout */
+
+#logout{
+.sidebar ul li a:hover{
+
+    background:#004080;
+
+}
+    padding:16px 25px;
+    font-size:17px;
+    cursor:pointer;
+    transition:.3s;
+
+}
+
+#logout:hover{
+
+    background:#004080;
+    padding-left:35px;
+
+}
+
+/* =========================
+   CONTENT
+========================= */
+
+.content{
+
+    margin-left:260px;
+    width:100%;
+    padding:40px;
+
+}
+
+.content h1{
+
+    color:#002855;
+    margin-bottom:20px;
+
+}
+
+.content p{
+
+    color:#555;
+    font-size:18px;
+
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:768px){
+
+.sidebar{
+
+    width:220px;
+
+}
+
+.content{
+
+    margin-left:220px;
+    padding:20px;
+
+}
+
+.sidebar h2{
+
+    font-size:22px;
+
+}
+
+.sidebar ul li a{
+
+    font-size:15px;
+    padding:14px 20px;
+
+}
+
+#logout{
+
+    font-size:15px;
+    padding:14px 20px;
+
+}
+
+}
