@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Grievance & Suggestions</title>
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+
+body{
+
+    font-family:Arial,sans-serif;
+    background:#f4f6f9;
+    margin:0;
+
+}
+
+.container{
+
+    max-width:700px;
+
+    margin:50px auto;
+
+    background:white;
+
+    padding:30px;
+
+    border-radius:10px;
+
+    box-shadow:0 0 15px rgba(0,0,0,.15);
+
+}
+
+h1{
+
+    text-align:center;
+
+    color:#004080;
+
+}
+
+input,
+textarea{
+
+    width:100%;
+
+    padding:12px;
+
+    margin-top:10px;
+
+    margin-bottom:20px;
+
+    border:1px solid #ccc;
+
+    border-radius:6px;
+
+    font-size:16px;
+
+    box-sizing:border-box;
+
+}
+
+textarea{
+
+    height:150px;
+
+    resize:vertical;
+
+}
+
+button{
+
+    width:100%;
+
+    background:#004080;
+
+    color:white;
+
+    border:none;
+
+    padding:15px;
+
+    border-radius:8px;
+
+    font-size:18px;
+
+    cursor:pointer;
+
+}
+
+button:hover{
+
+    background:#002855;
+
+}
+
+#status{
+
+    text-align:center;
+
+    margin-top:20px;
+
+    font-weight:bold;
+
+}
+
+.back{
+
+    text-align:center;
+
+    margin-top:30px;
+
+}
+
+.back a{
+
+    color:#004080;
+
+    text-decoration:none;
+
+    font-weight:bold;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>📢 Grievance & Suggestions</h1>
+
+<input
+type="text"
+id="name"
+placeholder="Your Name">
+
+<input
+type="email"
+id="email"
+placeholder="Your Email">
+
+<input
+type="text"
+id="mobile"
+placeholder="Mobile Number">
+
+<input
+type="text"
+id="subject"
+placeholder="Subject">
+
+<textarea
+id="message"
+placeholder="Write your grievance or suggestion..."></textarea>
+
+<button id="submitBtn">
+
+Submit
+
+</button>
+
+<p id="status"></p>
+
+<div class="back">
+
+<a href="index.html">
+
+← Back to Home
+
+</a>
+
+</div>
+
+</div>
+
+<script type="module" src="grievance.js"></script>
+
+</body>
+
+</html>
