@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Teacher Management | MMI Admin</title>
+
+<link rel="stylesheet" href="dashboard.css">
+
+<style>
+
+body{
+    background:#f4f6f9;
+}
+
+.content{
+    margin-left:260px;
+    padding:40px;
+}
+
+.container{
+
+    max-width:700px;
+    background:white;
+    padding:30px;
+    border-radius:12px;
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
+
+}
+
+.container h1{
+
+    color:#002855;
+    text-align:center;
+    margin-bottom:25px;
+
+}
+
+input,
+select{
+
+    width:100%;
+    padding:14px;
+    margin-bottom:18px;
+    font-size:16px;
+    border:1px solid #ccc;
+    border-radius:8px;
+    outline:none;
+
+}
+
+input:focus,
+select:focus{
+
+    border-color:#004080;
+
+}
+
+button{
+
+    width:100%;
+    padding:15px;
+    background:#004080;
+    color:white;
+    border:none;
+    border-radius:8px;
+    font-size:18px;
+    cursor:pointer;
+    transition:.3s;
+
+}
+
+button:hover{
+
+    background:#002855;
+
+}
+
+#previewImage{
+
+    width:220px;
+    height:220px;
+    object-fit:contain;
+    background:white;
+    padding:10px;
+    border:2px solid #004080;
+    border-radius:12px;
+    display:none;
+    margin:20px auto;
+
+}
+
+#status{
+
+    margin-top:20px;
+    text-align:center;
+    font-weight:bold;
+
+}
+
+@media(max-width:768px){
+
+.content{
+
+    margin-left:220px;
+    padding:20px;
+
+}
+
+.container{
+
+    padding:20px;
+
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- Sidebar -->
+
+<div class="sidebar">
+
+<h2>MMI Admin</h2>
+
+<ul>
+
+<li><a href="dashboard.html">🏠 Dashboard</a></li>
+
+<li><a href="manage-notices.html">📢 Manage Notices</a></li>
+
+<li><a href="gallery-admin.html">📤 Upload Gallery Images</a></li>
+
+<li><a href="manage-gallery.html">🗑 Delete Gallery Images</a></li>
+
+<li><a href="teacher-admin.html">➕ Add Teacher</a></li>
+
+<li><a href="manage-teachers.html">🗑 Delete Teachers</a></li>
+
+<li><a href="alumni-admin.html">🎓 Add Alumni</a></li>
+
+<li><a href="manage-alumni.html">🗑 Delete Alumni</a></li>
+<li><a href="downloads-admin.html">📄 Upload Downloads</a></li>
+
+<li><a href="manage-downloads.html">🗑 Manage Downloads</a></li>
+
+<li><a href="admin.html">🚪 Logout</a></li>
+
+</ul>
+
+</div>
+
+<!-- Content -->
+
+<div class="content">
+
+<div class="container">
+
+<h1>👨‍🏫 Teacher Management</h1>
+
+<input type="file"
+id="teacherPhoto"
+accept="image/*">
+
+<img id="previewImage">
+
+<input
+type="text"
+id="teacherName"
+placeholder="Teacher Name">
+
+<input
+type="text"
+id="teacherQualification"
+placeholder="Qualification">
+
+<input
+type="text"
+id="teacherSubject"
+placeholder="Subject">
+
+<select id="teacherDepartment">
+
+<option value="">Select Department</option>
+
+<option>Primary Section</option>
+
+<option>Middle Section</option>
+
+<option>Higher Section</option>
+
+</select>
+
+<button id="uploadBtn">
+
+Add Teacher
+
+</button>
+
+<p id="status"></p>
+
+</div>
+
+</div>
+
+<!-- Image Preview -->
+
+<script>
+
+const teacherPhoto=document.getElementById("teacherPhoto");
+
+teacherPhoto.addEventListener("change",function(){
+
+const file=this.files[0];
+
+if(file){
+
+const reader=new FileReader();
+
+reader.onload=function(e){
+
+const preview=document.getElementById("previewImage");
+
+preview.src=e.target.result;
+
+preview.style.display="block";
+
+}
+
+reader.readAsDataURL(file);
+
+}
+
+});
+
+</script>
+
+<!-- Logout -->
+
+<script>
+
+document.getElementById("logout").onclick=function(){
+
+window.location.href="admin.html";
+
+};
+
+</script>
+
+<!-- Firebase -->
+
+<script type="module" src="teacher-admin.js"></script>
+
+</body>
+
+</html>
