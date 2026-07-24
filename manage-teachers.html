@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Delete Teachers</title>
+
+<link rel="stylesheet" href="dashboard.css">
+
+<style>
+
+.content{
+    margin-left:260px;
+    padding:40px;
+}
+
+.content h1{
+    color:#002855;
+    margin-bottom:30px;
+}
+
+.teacher-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:25px;
+}
+
+.teacher-card{
+    background:white;
+    padding:15px;
+    border-radius:12px;
+    box-shadow:0 4px 12px rgba(0,0,0,.15);
+    text-align:center;
+}
+
+.teacher-card img{
+    width:100%;
+    height:180px;
+    object-fit:contain;
+    background:#f5f5f5;
+    border-radius:10px;
+    margin-bottom:15px;
+}
+
+.teacher-card h3{
+    color:#002855;
+    margin-bottom:10px;
+}
+
+.teacher-card p{
+    margin:6px 0;
+}
+
+.deleteBtn{
+    width:100%;
+    margin-top:15px;
+    padding:12px;
+    background:#dc3545;
+    color:white;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:16px;
+}
+
+.deleteBtn:hover{
+    background:#b02a37;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="sidebar">
+
+<h2>MMI Admin</h2>
+
+<ul>
+
+<li><a href="dashboard.html">🏠 Dashboard</a></li>
+
+<li><a href="manage-notices.html">📢 Manage Notices</a></li>
+
+<li><a href="gallery-admin.html">📤 Upload Gallery Images</a></li>
+
+<li><a href="manage-gallery.html">🗑 Delete Gallery Images</a></li>
+
+<li><a href="teacher-admin.html">👨‍🏫 Add Teacher</a></li>
+
+<li><a href="manage-teachers.html">🗑 Delete Teachers</a></li>
+
+<li><a href="alumni-admin.html">🎓 Add Alumni</a></li>
+
+<li><a href="manage-alumni.html">🗑 Delete Alumni</a></li>
+
+<li><a href="downloads-admin.html">📄 Upload Downloads</a></li>
+
+<li><a href="manage-downloads.html">🗑 Manage Downloads</a></li>
+<a href="manage-grievances.html">Manage Grievances</a>
+<li><a href="admin.html">🚪 Logout</a></li>
+
+</ul>
+
+</div>
+
+<div class="content">
+
+<h1>🗑 Delete Teachers</h1>
+
+<div id="teacherList" class="teacher-grid"></div>
+
+</div>
+
+<script type="module" src="manage-teachers.js"></script>
+
+</body>
+
+</html>
