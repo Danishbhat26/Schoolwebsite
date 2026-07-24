@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Downloads | Maryam Memorial Institute</title>
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+
+body{
+
+    margin:0;
+    font-family:Arial,sans-serif;
+    background:#f5f7fa;
+
+}
+
+.header{
+
+    background:#004080;
+    color:white;
+    text-align:center;
+    padding:25px;
+
+}
+
+.header h1{
+
+    margin:0;
+
+}
+
+#downloadsContainer{
+
+    max-width:1200px;
+
+    margin:40px auto;
+
+    padding:20px;
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+
+    gap:25px;
+
+}
+
+.download-card{
+
+    background:white;
+
+    border-radius:12px;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.15);
+
+    padding:25px;
+
+    transition:.3s;
+
+}
+
+.download-card:hover{
+
+    transform:translateY(-5px);
+
+}
+
+.download-card h3{
+
+    color:#004080;
+
+    margin-top:0;
+
+}
+
+.download-card p{
+
+    color:#555;
+
+    line-height:1.6;
+
+}
+
+.downloadBtn{
+
+    display:inline-block;
+
+    margin-top:15px;
+
+    background:#004080;
+
+    color:white;
+
+    text-decoration:none;
+
+    padding:12px 22px;
+
+    border-radius:8px;
+
+    font-weight:bold;
+
+}
+
+.downloadBtn:hover{
+
+    background:#002855;
+
+}
+
+.backHome{
+
+    text-align:center;
+
+    margin:40px;
+
+}
+
+.backHome a{
+
+    text-decoration:none;
+
+    color:white;
+
+    background:#004080;
+
+    padding:12px 25px;
+
+    border-radius:8px;
+
+}
+
+.backHome a:hover{
+
+    background:#002855;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="header">
+
+<h1>📥 School Downloads</h1>
+
+<p>Access and download all official school documents, including Admission Forms, Notices, Circulars, Syllabus, Time Tables, Results,Prospectus, and other important files.</p>
+
+</div>
+
+<div id="downloadsContainer">
+
+</div>
+
+<div class="backHome">
+
+<a href="index.html">
+
+← Back to Home
+
+</a>
+
+</div>
+
+<script type="module" src="downloads.js"></script>
+
+</body>
+
+</html>
