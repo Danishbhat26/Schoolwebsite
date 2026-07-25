@@ -5,10 +5,15 @@ import {
     signOut
 } from "https://www.gstatic.com/firebasejs/12.1.0/firebase-auth.js";
 
-// Protect Dashboard
+console.log("Dashboard JS Loaded");
+
 onAuthStateChanged(auth, (user) => {
 
+    console.log(user);
+
     if (!user) {
+
+        alert("Not Logged In");
 
         window.location.href = "admin.html";
 
@@ -16,7 +21,6 @@ onAuthStateChanged(auth, (user) => {
 
 });
 
-// Logout
 document.getElementById("logout").addEventListener("click", async () => {
 
     await signOut(auth);
